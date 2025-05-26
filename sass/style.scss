@@ -1,0 +1,299 @@
+// Variables
+$primary-color: #434341;
+$secondary-color: #E9DACE;
+$border-color: #ddd;
+$font-family: Montserrat, sans-serif;
+$font-size: 18px;
+$header-height: 60px;
+$background-primary: #E9DACE;
+
+// Default
+
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+body{
+  background-color: $background-primary;
+}
+.container{
+  margin: auto;
+  padding: 0 135px;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+p{
+  font-size: 18px;
+  font-weight: 300;
+  color: $primary-color;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.btn-default {
+  padding: 15px 65px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-size: 22px;
+  font-weight: 800;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #252525;
+    transition: background-color 0.3s ease;
+  }
+}
+.title-section{
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  .line-text{
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 500;
+    padding: 0 100px;
+    position: relative;
+    z-index: 2;
+    background-color: $secondary-color;
+  }
+  .line{
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color: $primary-color;
+    z-index: 1;
+    top: 50%;
+  }
+  .line-1{
+    left: 0;
+  }
+  .line-2{
+    right: 0;
+  }
+}
+.default-list{
+  padding: 30px 30px 45px;
+  border-top: 1px solid #434341;
+  border-bottom: 1px solid #434341;
+  li{
+    position: relative;
+    margin-bottom: 20px;
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: 300;
+    b{
+      font-weight: 700;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &:before{
+      content: ".";
+      display: block;
+      position: absolute;
+      font-size: 18px;
+      font-weight: 700;
+      left: -15px;
+      top: -2px;
+    }
+  }
+}
+.list-columns{
+  column-count: 2;
+  column-gap: 60px;
+}
+// Header Styles
+.header{
+  position: sticky;
+  top: 0;
+  background-color: $secondary-color;
+
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: transparent;
+    border-bottom: 1px solid $border-color;
+
+    .header-navigation{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-direction: column;
+
+      .header-info{
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: $font-size;
+        color: $primary-color;
+        font-weight: 300;
+
+        a {
+          margin-left: 20px;
+          text-decoration: none;
+          font-size: $font-size;
+          font-weight: 700;
+          color: $primary-color;
+
+          &.cta-button {
+            padding: 10px 45px;
+            margin-left: 45px;
+            background-color: $primary-color;
+            color: $secondary-color;
+            font-size: 16px;
+            font-weight: 900;
+            border-radius: 35px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #252525;
+              transition: background-color 0.3s ease;
+            }
+          }
+
+        }
+
+      }
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      li{
+        margin-right: 43px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a{
+          position: relative;
+          font-size: 16px;
+          font-weight: 300;
+          color: $primary-color;
+          margin: 0;
+          text-transform: uppercase;
+          padding: 0 2px;
+          &:hover{
+            font-weight: 700;
+            padding: 0;
+          }
+          &:before{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $primary-color;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform .3s cubic-bezier(.33,1,.68,1);
+          }
+          &:hover:before{
+            transform: scaleX(1);
+            transform-origin: left;
+            transition: transform .3s cubic-bezier(.33,1,.68,1);
+          }
+        }
+        &.current-menu-item{
+          a{
+            font-weight: 700;
+            &:before{
+              content: "";
+              display: block;
+              width: 100%;
+              height: 1px;
+              background-color: $primary-color;
+              position: absolute;
+              left: 0;
+              bottom: 0;
+            }
+          }
+        }
+      }
+      a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: $primary-color;
+        font-size: $font-size;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($primary-color, 20%);
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+}
+.hero{
+  background-image: url('../img/van-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0 100px;
+  h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .hero-list{
+    margin: 33px 0 50px;
+    max-width: 470px;
+    padding: 20px 20px 40px 35px;
+    li{
+      position: relative;
+      margin-bottom: 45px;
+      color: $primary-color;
+      font-size: 22px;
+      font-weight: 300;
+      b{
+        font-weight: 700;
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &:before{
+        content: ".";
+        display: block;
+        position: absolute;
+        font-size: 18px;
+        font-weight: 700;
+        left: -15px;
+        top: -2px;
+      }
+    }
+  }
+}
+.info-section{
+  padding: 100px 0 32px;
+  .info-text {
+    margin-bottom: 30px;
+    padding: 0 100px;
+    p {
+      text-align: center;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.services-section{
+  padding: 32px 0 32px;
+}
