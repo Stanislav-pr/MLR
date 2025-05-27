@@ -324,7 +324,69 @@ p {
 .info-section .info-text p:last-child {
   margin-bottom: 0;
 }
+.info-section .bold-text {
+  font-weight: 700;
+  margin-top: 30px;
+  text-align: center;
+}
 
 .services-section {
   padding: 32px 0 32px;
+}
+.services-section .services-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.services-section .services-items .services-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 28px 48px;
+  border: 1px solid #434341;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.services-section .services-items .services-item .services-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.services-section .services-items .services-item .services-icon p {
+  font-weight: 400;
+  margin-left: 20px;
+}
+.services-section .services-items .services-item svg {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.services-section .services-items .services-item:hover {
+  -webkit-box-shadow: 0 0 14px 0 rgba(67, 67, 67, 0.5);
+          box-shadow: 0 0 14px 0 rgba(67, 67, 67, 0.5);
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.services-section .services-items .services-item:hover svg {
+  -webkit-transform: translateX(30px);
+          transform: translateX(30px);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
 }

@@ -293,7 +293,45 @@ p{
       }
     }
   }
+  .bold-text{
+    font-weight: 700;
+    margin-top: 30px;
+    text-align: center;
+  }
+
 }
 .services-section{
   padding: 32px 0 32px;
+  .services-items{
+    display: flex;
+    justify-content: space-between;
+    .services-item{
+      display: flex;
+      align-items: center;
+      padding: 28px 48px;
+      border: 1px solid $primary-color;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      .services-icon{
+        display: flex;
+        align-items: center;
+        p{
+          font-weight: 400;
+          margin-left: 20px;
+        }
+      }
+      svg{
+        transform: translateX(10px);
+        transition: transform 0.5s ease;
+      }
+      &:hover{
+        box-shadow: 0 0 14px 0 rgba(67, 67, 67, 0.5);
+        transition: box-shadow 0.3s ease;
+      }
+      &:hover svg{
+        transform: translateX(30px);
+        transition: transform 0.5s ease;
+      }
+    }
+  }
 }
