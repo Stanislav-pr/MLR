@@ -21,7 +21,7 @@ body{
 }
 .container{
   margin: auto;
-  padding: 0 135px;
+  max-width: 1170px;
 }
 ul{
   list-style: none;
@@ -279,36 +279,40 @@ p{
     }
   }
 }
+
 .info-section{
   padding: 100px 0 32px;
-  .info-text {
-    margin-bottom: 30px;
+  .info-wrap{
     padding: 0 100px;
-    p {
-      text-align: center;
-      margin-bottom: 10px;
+    .info-text {
+      margin-bottom: 30px;
+      p {
+        text-align: center;
+        margin-bottom: 10px;
 
-      &:last-child {
-        margin-bottom: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
+    .bold-text{
+      font-weight: 700;
+      margin-top: 30px;
+      text-align: center;
+    }
   }
-  .bold-text{
-    font-weight: 700;
-    margin-top: 30px;
-    text-align: center;
-  }
-
 }
+
 .services-section{
   padding: 32px 0 32px;
   .services-items{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 32px;
     .services-item{
       display: flex;
       align-items: center;
-      padding: 28px 48px;
+      padding: 25px 48px;
       border: 1px solid $primary-color;
       border-radius: 50px;
       transition: all 0.3s ease;
@@ -329,7 +333,7 @@ p{
         transition: box-shadow 0.3s ease;
       }
       &:hover svg{
-        transform: translateX(30px);
+        transform: translateX(55px);
         transition: transform 0.5s ease;
       }
     }

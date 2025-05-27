@@ -12,7 +12,7 @@ body {
 
 .container {
   margin: auto;
-  padding: 0 135px;
+  max-width: 1170px;
 }
 
 ul {
@@ -313,18 +313,20 @@ p {
 .info-section {
   padding: 100px 0 32px;
 }
-.info-section .info-text {
-  margin-bottom: 30px;
+.info-section .info-wrap {
   padding: 0 100px;
 }
-.info-section .info-text p {
+.info-section .info-wrap .info-text {
+  margin-bottom: 30px;
+}
+.info-section .info-wrap .info-text p {
   text-align: center;
   margin-bottom: 10px;
 }
-.info-section .info-text p:last-child {
+.info-section .info-wrap .info-text p:last-child {
   margin-bottom: 0;
 }
-.info-section .bold-text {
+.info-section .info-wrap .bold-text {
   font-weight: 700;
   margin-top: 30px;
   text-align: center;
@@ -334,12 +336,11 @@ p {
   padding: 32px 0 32px;
 }
 .services-section .services-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 32px 1fr 32px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 32px;
 }
 .services-section .services-items .services-item {
   display: -webkit-box;
@@ -348,7 +349,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 28px 48px;
+  padding: 25px 48px;
   border: 1px solid #434341;
   border-radius: 50px;
   -webkit-transition: all 0.3s ease;
@@ -383,8 +384,8 @@ p {
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 .services-section .services-items .services-item:hover svg {
-  -webkit-transform: translateX(30px);
-          transform: translateX(30px);
+  -webkit-transform: translateX(55px);
+          transform: translateX(55px);
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
