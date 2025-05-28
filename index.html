@@ -35,11 +35,21 @@
             </div>
           </div>
           <ul class="nav">
-            <li><a href="#">Кремена</a></li>
-            <li><a href="#">Перевезти</a></li>
-            <li><a href="#">Перевезти Укр</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li class="menu-item-has-children">
+              <a href="#">Кремація</a>
+              <ul class="sub-menu">
+                <li><a href="#">Польща</a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+              </ul>
+            </li>
+            <li><a href="#">перевезення померлих</a></li>
+            <li><a href="#">перевезення урн</a></li>
             <li><a href="#">Партнерам</a></li>
+            <li><a href="#">Контакти</a></li>
           </ul>
         </div>
       </div>
@@ -48,72 +58,134 @@
 
 
   </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Міжнародні <br> перевезення <br>померлих</h1>
-      <ul class="default-list hero-list">
-        <li>Забезпечимо <b>транспортування померлого</b> або <b>урни</b></li>
-        <li>Організуємо <b>кремацію</b></li>
-        <li>Підготуємо всі документи</li>
-      </ul>
-      <a href="#" class="btn-default">звʼязатись</a>
-    </div>
-  </section>
-  <section class="info-section">
-    <div class="container">
-      <h2 class="title-section"><span class="line line-1"></span><span class="line-text">Хто
-        ми</span><span class="line line-2"></span></h2>
-      <div class="info-wrap">
-        <div class="info-text">
-          <p>Ми надаємо ритуальні послуги по всій Україні вже понад 17 років, допомагаючи родинам у найскладніші моменти.</p>
-          <p>Наша компанія спеціалізується на міжнародному перевезенні померлих, кремацій та оформленні всіх необхідних документів.</p>
-          <p>Пропонуємо найвигідніші ціни, зберігаючи високий рівень якості обслуговування.</p>
-          <p>Коли дорога людина пішла з життя далеко від дому, важливо повернути її на Батьківщину швидко та без зайвих труднощів.</p>
-        </div>
-        <ul class="default-list list-columns">
-          <li>Перевезення померлих з-за кордону в Україну, та з України по всьому світу</li>
-          <li>Повний юридичний супровід</li>
-          <li>Логістика по всій Україні</li>
-          <li>Оптимальні ціни та оперативність</li>
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Міжнародні <br> перевезення <br>померлих</h1>
+        <ul class="default-list hero-list">
+          <li>Забезпечимо <b>транспортування померлого</b> або <b>урни</b></li>
+          <li>Організуємо <b>кремацію</b></li>
+          <li>Підготуємо всі документи</li>
         </ul>
-        <p class="bold-text">Ми беремо на себе всі складнощі, щоб повернення близької людини додому відбулося без затримок і проблем. Ми завжди на зв’язку, щоб підтримати та вирішити всі питання.</p>
+        <a href="#" class="btn-default">звʼязатись</a>
       </div>
-    </div>
-  </section>
-  <section class="services-section">
+    </section>
+    <section class="info-section">
+      <div class="container">
+        <h2 class="title-section"><span class="line line-1"></span><span class="line-text">Хто
+          ми</span><span class="line line-2"></span></h2>
+        <div class="info-wrap">
+          <div class="info-text">
+            <p>Ми надаємо ритуальні послуги по всій Україні вже понад 17 років, допомагаючи родинам у найскладніші моменти.</p>
+            <p>Наша компанія спеціалізується на міжнародному перевезенні померлих, кремацій та оформленні всіх необхідних документів.</p>
+            <p>Пропонуємо найвигідніші ціни, зберігаючи високий рівень якості обслуговування.</p>
+            <p>Коли дорога людина пішла з життя далеко від дому, важливо повернути її на Батьківщину швидко та без зайвих труднощів.</p>
+          </div>
+          <ul class="default-list list-columns">
+            <li>Перевезення померлих з-за кордону в Україну, та з України по всьому світу</li>
+            <li>Повний юридичний супровід</li>
+            <li>Логістика по всій Україні</li>
+            <li>Оптимальні ціни та оперативність</li>
+          </ul>
+          <p class="bold-text">Ми беремо на себе всі складнощі, щоб повернення близької людини додому відбулося без затримок і проблем. Ми завжди на зв’язку, щоб підтримати та вирішити всі питання.</p>
+        </div>
+      </div>
+    </section>
+    <section class="services-section">
+      <div class="container">
+        <h2 class="title-section"><span class="line line-1"></span><span class="line-text">наші послуги</span><span class="line line-2"></span></h2>
+        <div class="services-items">
+            <a href="#" class="services-item">
+              <div class="services-icon">
+                <img src="img/lenta.svg" alt="">
+                <p>Перевезення <br> померлих</p>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="8" viewBox="0 0 33 8" fill="none">
+                <path d="M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4V4.5H32V4V3.5H0V4Z" fill="#434341"/>
+              </svg>
+            </a>
+            <a href="#" class="services-item">
+              <div class="services-icon">
+                <img src="img/urna.svg" alt="">
+                <p>Перевезення <br> урни</p>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="8" viewBox="0 0 33 8" fill="none">
+                <path d="M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4V4.5H32V4V3.5H0V4Z" fill="#434341"/>
+              </svg>
+            </a>
+            <a href="#" class="services-item">
+              <div class="services-icon">
+                <img src="img/candle.svg" alt="">
+                <p>Кремація в <br> Європі</p>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="33" height="8" viewBox="0 0 33 8" fill="none">
+                <path d="M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4V4.5H32V4V3.5H0V4Z" fill="#434341"/>
+              </svg>
+            </a>
+        </div>
+      </div>
+    </section>
+    <section class="can-do-section">
+      <div class="container">
+        <h2 class="title-section title-two-row"><span class="line line-1"></span><div class="line-text">що ми можемо<br>зробити для вас</div><span class="line line-2"></span></h2>
+        <div class="can-do-list">
+          <div class="can-do-item">
+            <div class="title-can-do">Організуємо перевезення померлого з-за кордону в Україну</div>
+            <div class="text-can-do">Ми забезпечимо швидке та безпечне транспортування з будь-якої країни до України.</div>
+          </div>
+          <div class="can-do-item">
+            <div class="title-can-do">Надамо зручний спосіб оплати та детальну консультацію</div>
+            <div class="text-can-do">Ми забезпечуємо гнучкі умови оплати і консультуємо щодо всіх етапів процесу перевезення.</div>
+          </div>
+          <div class="can-do-item">
+            <div class="title-can-do">Забезпечимо найнижчі ціни на ринку</div>
+            <div class="text-can-do">Оптимізуємо витрати, гарантуючи вигідні ціни та високу якість послуг.</div>
+          </div>
+          <div class="can-do-item">
+            <div class="title-can-do">Забезпечимо цілісність і безпеку померлого протягом усього транспортування</div>
+            <div class="text-can-do">Наші транспортні засоби відповідають усім вимогам безпеки та гігієни.</div>
+          </div>
+          <div class="can-do-item">
+            <div class="title-can-do">Перевеземо померлого із України по всьому світу</div>
+            <div class="text-can-do">Ми організуємо перевезення з України в будь-яку точку світу, з урахуванням всіх міжнародних вимог.</div>
+          </div>
+          <div class="can-do-item">
+            <div class="title-can-do">Оформимо необхідні санітарні сертифікати та дозволи</div>
+            <div class="text-can-do">Ми подбаємо про відповідність всіх стандартів безпеки і санітарії при транспортуванні.</div>
+          </div>
+          <div class="can-do-item">
+            <div class="title-can-do">Виконаємо транспортування в будь-який регіон України</div>
+            <div class="text-can-do">Ми організуємо перевезення в будь-яку точку України.</div>
+          </div>
+          <div class="can-do-item">
+            <div class="title-can-do">Забезпечимо виконання всіх необхідних формальностей</div>
+            <div class="text-can-do">Ми візьмемо на себе організацію всіх документів, дозволів та митних процедур.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
     <div class="container">
-      <h2 class="title-section"><span class="line line-1"></span><span class="line-text">наші послуги</span><span class="line line-2"></span></h2>
-      <div class="services-items">
-          <a href="#" class="services-item">
-            <div class="services-icon">
-              <img src="img/lenta.svg" alt="">
-              <p>Перевезення <br> померлих</p>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="8" viewBox="0 0 33 8" fill="none">
-              <path d="M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4V4.5H32V4V3.5H0V4Z" fill="#434341"/>
-            </svg>
-          </a>
-          <a href="#" class="services-item">
-            <div class="services-icon">
-              <img src="img/urna.svg" alt="">
-              <p>Перевезення <br> урни</p>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="8" viewBox="0 0 33 8" fill="none">
-              <path d="M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4V4.5H32V4V3.5H0V4Z" fill="#434341"/>
-            </svg>
-          </a>
-          <a href="#" class="services-item">
-            <div class="services-icon">
-              <img src="img/candle.svg" alt="">
-              <p>Кремація в <br> Європі</p>
-            </div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="8" viewBox="0 0 33 8" fill="none">
-              <path d="M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4V4.5H32V4V3.5H0V4Z" fill="#434341"/>
-            </svg>
-          </a>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="img/logo.svg" alt="">
+        </div>
+        <div class="footer-contacts">
+          <div class="footer-contacts-item">
+            <img src="img/phone.svg" alt="">
+            <a href="tel: +38 (044) 500-50-50">+38 (044) 500-50-50</a>
+          </div>
+          <div class="footer-contacts-item">
+            <img src="img/mail.svg" alt="">
+            <a href="mailto: 8Y4yD@example.com">8Y4yD@example.com</a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+
 </body>
 </html>
