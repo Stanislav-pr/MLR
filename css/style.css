@@ -33,6 +33,8 @@ p {
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .btn-default {
@@ -464,34 +466,86 @@ p {
   top: 75%;
 }
 .can-do-section .can-do-list {
-  -webkit-columns: 2;
-     -moz-columns: 2;
-          columns: 2;
-  -webkit-column-gap: 220px;
-     -moz-column-gap: 220px;
-          column-gap: 220px;
-  -webkit-column-rule: 1px solid #000;
-     -moz-column-rule: 1px solid #000;
-          column-rule: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
+}
+.can-do-section .can-do-list .can-do-left {
+  width: 50%;
+  padding-right: 115px;
+}
+.can-do-section .can-do-list .can-do-right {
+  width: 50%;
+  padding-left: 115px;
+  border-left: 1px solid #434341;
 }
 .can-do-section .can-do-list .can-do-item {
   padding: 0;
   margin-bottom: 70px;
 }
-.can-do-section .can-do-list .can-do-item:nth-child(4) {
-  margin-bottom: 0;
-}
-.can-do-section .can-do-list .can-do-item:nth-child(8) {
+.can-do-section .can-do-list .can-do-item:last-child {
   margin-bottom: 0;
 }
 .can-do-section .can-do-list .can-do-item .title-can-do {
   margin-bottom: 16px;
+  font-size: 18px;
   font-weight: 700;
   padding-bottom: 16px;
   border-bottom: 1px solid #434341;
+  min-height: 60px;
 }
 .can-do-section .can-do-list .can-do-item .text-can-do {
   margin-bottom: 20px;
   font-weight: 300;
+  font-size: 18px;
+  min-height: 70px;
+}
+.can-do-section .can-do-list .can-do-item:last-child .text-can-do {
+  margin-bottom: 0;
+  min-height: unset;
+}
+
+.choice-section {
+  padding: 50px 0 0;
+}
+.choice-section .choice-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.choice-section .card-choice {
+  width: calc(50% - 15px);
+  margin-bottom: 60px;
+  padding-top: 85px;
+  position: relative;
+}
+.choice-section .card-choice .choice-count {
+  font-size: 250px;
+  font-weight: 400;
+  position: absolute;
+  opacity: 0.05;
+  left: 0;
+  top: -60px;
+}
+.choice-section .card-choice .card-choice-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #434341;
+}
+.choice-section .card-choice p {
+  line-height: 130%;
+}
+
+.collab-section {
+  padding: 50px 0;
 }
