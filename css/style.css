@@ -8,7 +8,7 @@ html, body {
 
 body {
   background-color: #E9DACE;
-  min-height: 2000px;
+  position: relative;
 }
 
 .container {
@@ -179,10 +179,13 @@ b {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
+  left: 0;
   top: 0;
+  width: 100%;
   z-index: 1000;
   background-color: #E9DACE;
+  border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
 }
 .header .header-wrapper {
   display: -webkit-box;
@@ -394,6 +397,11 @@ b {
 }
 .header .header-wrapper .nav a:last-child {
   margin-right: 0;
+}
+
+.main {
+  position: relative;
+  top: 127px;
 }
 
 .hero {
@@ -853,6 +861,8 @@ b {
 }
 
 .footer {
+  position: relative;
+  top: 127px;
   padding-bottom: 35px;
 }
 .footer .footer-content {
