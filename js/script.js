@@ -4,5 +4,5 @@ jQuery(document).ready(function ($) {
         $(this).next('.faqs-item-content').slideToggle();
     });
 
-    // let stickyEl = new Sticksy('.header-wrapper');
+
 });
