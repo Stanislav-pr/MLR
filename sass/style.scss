@@ -76,6 +76,9 @@ b{
     .line-text{
       padding: 0 60px 0 0;
     }
+    .line-2{
+      width: 90%;
+    }
   }
   .line{
     position: absolute;
@@ -1057,4 +1060,107 @@ b{
 
 .cremation-hero{
   padding: 25px 0 40px;
+  .cremation-hero-content{
+    position: relative;
+    .cremation-hero-text {
+      width: 75%;
+      margin-left: auto;
+      h3{
+        font-size: 32px;
+        font-weight: 500;
+        padding: 22px 0;
+        border-top: 0.5px solid rgba(67, 67, 65, 0.5);
+        border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+        margin-bottom: 32px;
+      }
+      p{
+        padding: 0 0 32px;
+        border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+        margin-bottom: 47px;
+      }
+    }
+    .cremation-hero-img{
+      max-width: 25%;
+      position: absolute;
+      left: 0;
+      bottom: -185px;
+      z-index: 3;
+    }
+  }
+}
+.happened-section{
+  padding: 40px 0;
+  margin-top: 33px;
+  .happened-content{
+    p{
+      margin-bottom: 16px;
+    }
+    hr{
+      margin: 32px 0;
+      border: 0.5px solid rgba(67, 67, 65, 0.5);
+    }
+  }
+  .happened-list{
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px 30px;
+    li{
+      a{
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 18px;
+        color: $primary-color;
+        transition: all 0.3s ease;
+        padding: 18px 55px 18px 44px;
+        border: 0.5px solid rgba(67, 67, 65, 0.5);
+        border-radius: 50px;
+        img{
+          margin-right: 15px;
+        }
+        &:hover{
+          font-weight: 700;
+          border: 1px solid rgba(67, 67, 65);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}
+.urn-section{
+  padding: 40px 0;
+  .urn-content{
+    margin: 32px 0 64px;
+  }
+  .urn-products {
+    display: flex;
+    .urn-product {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25%;
+      border-right: 0.5px solid rgba(67, 67, 65, 0.5);
+      &:last-child{
+        border-right: none;
+      }
+    }
+  }
+}
+.farewell-section{
+  padding: 40px 0;
+  .farewell-content{
+    margin: 33px 0 40px;
+    h4{
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    p{
+      margin-bottom: 5px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
 }

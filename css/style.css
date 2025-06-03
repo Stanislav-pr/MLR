@@ -78,6 +78,9 @@ b {
 .title-section.one-line .line-text {
   padding: 0 60px 0 0;
 }
+.title-section.one-line .line-2 {
+  width: 90%;
+}
 .title-section .line {
   position: absolute;
   width: 50%;
@@ -1227,4 +1230,122 @@ b {
 
 .cremation-hero {
   padding: 25px 0 40px;
+}
+.cremation-hero .cremation-hero-content {
+  position: relative;
+}
+.cremation-hero .cremation-hero-content .cremation-hero-text {
+  width: 75%;
+  margin-left: auto;
+}
+.cremation-hero .cremation-hero-content .cremation-hero-text h3 {
+  font-size: 32px;
+  font-weight: 500;
+  padding: 22px 0;
+  border-top: 0.5px solid rgba(67, 67, 65, 0.5);
+  border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+  margin-bottom: 32px;
+}
+.cremation-hero .cremation-hero-content .cremation-hero-text p {
+  padding: 0 0 32px;
+  border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+  margin-bottom: 47px;
+}
+.cremation-hero .cremation-hero-content .cremation-hero-img {
+  max-width: 25%;
+  position: absolute;
+  left: 0;
+  bottom: -185px;
+  z-index: 3;
+}
+
+.happened-section {
+  padding: 40px 0;
+  margin-top: 33px;
+}
+.happened-section .happened-content p {
+  margin-bottom: 16px;
+}
+.happened-section .happened-content hr {
+  margin: 32px 0;
+  border: 0.5px solid rgba(67, 67, 65, 0.5);
+}
+.happened-section .happened-list {
+  margin-top: 32px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px 30px;
+}
+.happened-section .happened-list li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  font-size: 18px;
+  color: #434341;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 18px 55px 18px 44px;
+  border: 0.5px solid rgba(67, 67, 65, 0.5);
+  border-radius: 50px;
+}
+.happened-section .happened-list li a img {
+  margin-right: 15px;
+}
+.happened-section .happened-list li a:hover {
+  font-weight: 700;
+  border: 1px solid rgb(67, 67, 65);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.urn-section {
+  padding: 40px 0;
+}
+.urn-section .urn-content {
+  margin: 32px 0 64px;
+}
+.urn-section .urn-products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.urn-section .urn-products .urn-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  border-right: 0.5px solid rgba(67, 67, 65, 0.5);
+}
+.urn-section .urn-products .urn-product:last-child {
+  border-right: none;
+}
+
+.farewell-section {
+  padding: 40px 0;
+}
+.farewell-section .farewell-content {
+  margin: 33px 0 40px;
+}
+.farewell-section .farewell-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.farewell-section .farewell-content p {
+  margin-bottom: 5px;
+}
+.farewell-section .farewell-content p:last-child {
+  margin-bottom: 0;
 }
