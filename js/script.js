@@ -13,4 +13,31 @@ jQuery(document).ready(function ($) {
         slidesPerView: 4,
         spaceBetween: 0,
     });
+
+    $('.title-section.one-line').each(function () {
+            let $heading = $(this);
+
+        if ($heading.find('br').length > 0) {
+            $heading.addClass('multiline');
+            return;
+        }
+
+            let $clone = $heading.clone()
+                .css({
+                    visibility: 'hidden',
+                    whiteSpace: 'nowrap',
+                    width: 'auto',
+                    display: 'inline-block',
+                    position: 'absolute'
+                })
+                .appendTo('body');
+
+            if ($heading.height() > $clone.height()) {
+                $heading.addClass('multiline');
+            }
+
+            $clone.remove();
+
+    });
+
 });

@@ -81,6 +81,9 @@ b {
 .title-section.one-line .line-2 {
   width: 90%;
 }
+.title-section.one-line.multiline .line-2 {
+  top: 75%;
+}
 .title-section .line {
   position: absolute;
   width: 50%;
@@ -185,6 +188,7 @@ b {
   font-size: 70px;
   font-weight: 500;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .header {
@@ -1228,17 +1232,17 @@ b {
   margin-top: 47px;
 }
 
-.cremation-hero {
+.page-hero {
   padding: 25px 0 40px;
 }
-.cremation-hero .cremation-hero-content {
+.page-hero .cremation-hero-content {
   position: relative;
 }
-.cremation-hero .cremation-hero-content .cremation-hero-text {
+.page-hero .cremation-hero-content .cremation-hero-text {
   width: 75%;
   margin-left: auto;
 }
-.cremation-hero .cremation-hero-content .cremation-hero-text h3 {
+.page-hero .cremation-hero-content .cremation-hero-text h3 {
   font-size: 32px;
   font-weight: 500;
   padding: 22px 0;
@@ -1246,17 +1250,23 @@ b {
   border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
   margin-bottom: 32px;
 }
-.cremation-hero .cremation-hero-content .cremation-hero-text p {
+.page-hero .cremation-hero-content .cremation-hero-text .cremation-text {
   padding: 0 0 32px;
   border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
   margin-bottom: 47px;
 }
-.cremation-hero .cremation-hero-content .cremation-hero-img {
+.page-hero .cremation-hero-content .cremation-hero-text .cremation-text p {
+  margin-bottom: 10px;
+}
+.page-hero .cremation-hero-content .cremation-hero-img {
   max-width: 25%;
   position: absolute;
   left: 0;
   bottom: -185px;
   z-index: 3;
+}
+.page-hero .cremation-hero-content .cremation-hero-img.top-img {
+  bottom: 0;
 }
 
 .happened-section {
@@ -1423,4 +1433,97 @@ b {
 }
 .cremation-costs .costs-value .value-cost {
   font-weight: 700;
+  max-width: 57%;
+}
+
+.lists-section {
+  padding: 40px 0;
+}
+.lists-section .lists-content {
+  padding-top: 12px;
+  margin: 33px 0 64px;
+}
+.lists-section .lists-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+.lists-section .lists-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.lists-section .lists-content p {
+  margin-bottom: 22px;
+}
+.lists-section .lists-content ul {
+  list-style-type: disc;
+  padding-left: 15px;
+  margin-bottom: 32px;
+}
+.lists-section .lists-content ul.two-column-list {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+}
+.lists-section .lists-content ul li {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 300;
+  padding-right: 135px;
+}
+.lists-section .lists-content ul li::marker {
+  font-size: 14px;
+}
+.lists-section .lists-content ul li:last-child {
+  margin-bottom: 0;
+}
+.lists-section .lists-note {
+  padding: 32px 0;
+  border-top: 0.5px solid rgba(67, 67, 65, 0.5);
+}
+.lists-section .cremation-costs {
+  border-top: 0.5px solid rgba(67, 67, 65, 0.5);
+}
+.lists-section .cremation-costs .costs-value {
+  margin: 26px 0 0;
+}
+.lists-section h1 {
+  font-size: 70px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1180px) {
+  .container {
+    padding: 0 15px;
+    max-width: 100%;
+  }
+  .header .header-wrapper .nav li {
+    margin-right: 25px;
+  }
+  .hero {
+    padding: 80px 0 40px;
+  }
+  .info-section {
+    padding: 40px 0 32px;
+  }
+  .services-section .services-items {
+    grid-column-gap: 20px;
+  }
+  .services-section .services-items .services-item:hover svg {
+    -webkit-transform: translateX(35px);
+    transform: translateX(35px);
+  }
+  .can-do-section .can-do-list .can-do-left {
+    padding-right: 65px;
+  }
+  .can-do-section .can-do-list .can-do-right {
+    padding-left: 65px;
+  }
+  .title-section .line-text {
+    font-size: 50px;
+    padding: 0 30px;
+  }
 }
