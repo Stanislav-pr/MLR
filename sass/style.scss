@@ -172,6 +172,22 @@ b{
   text-transform: uppercase;
 }
 
+.title-two-row{
+  margin: 0 auto 80px;
+  .line-text{
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .line{
+    &.line-1{
+      top: 25%;
+    }
+    &.line-2{
+      top: 75%;
+    }
+  }
+}
+
 // Header Styles
 
 .header{
@@ -522,21 +538,6 @@ b{
 }
 .can-do-section{
   padding: 40px 0 50px;
-  .title-two-row{
-    margin: 0 auto 80px;
-    .line-text{
-      width: fit-content;
-      margin: 0 auto;
-    }
-    .line{
-      &.line-1{
-        top: 25%;
-      }
-      &.line-2{
-        top: 75%;
-      }
-    }
-  }
   .can-do-list{
     display: flex;
     flex-wrap: wrap;
@@ -1299,8 +1300,99 @@ b{
     text-transform: uppercase;
   }
 }
-
-
+.coworking-section{
+  padding: 32px 0 64px;
+  .title-two-row {
+    margin: 0 auto 32px;
+  }
+  .info-wrap{
+    padding: 0 100px;
+    .info-text {
+      margin-bottom: 32px;
+      p {
+        text-align: center;
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      hr{
+        margin: 32px 0;
+        border: 0.5px solid rgba(67, 67, 65, 0.5);
+        .half-hr{
+          margin: 16px 0;
+        }
+      }
+    }
+  }
+  .services-items{
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 32px;
+    .services-item{
+      display: flex;
+      align-items: center;
+      padding: 25px 48px;
+      border: 1px solid $primary-color;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      .services-icon{
+        display: flex;
+        align-items: center;
+        p{
+          font-weight: 400;
+          margin-left: 20px;
+        }
+      }
+      svg{
+        transform: translateX(10px);
+        transition: transform 0.5s ease;
+      }
+      &:hover{
+        box-shadow: 0 0 14px 0 rgba(67, 67, 67, 0.5);
+        transition: box-shadow 0.3s ease;
+      }
+      &:hover svg{
+        transform: translateX(55px);
+        transition: transform 0.5s ease;
+      }
+    }
+  }
+}
+.form-wrap{
+  h2{
+    margin-bottom: 16px;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  form{
+    max-width: 51%;
+    margin: 0 auto;
+  }
+}
+.moved-section{
+  padding: 32px 0 40px;
+  h1{
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .moved-info{
+    margin-bottom: 32px;
+    p{
+      text-align: center;
+      margin-bottom: 10px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
 @media (max-width: 1180px) {
   .container{
     padding: 0 15px;

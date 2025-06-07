@@ -191,6 +191,22 @@ b {
   text-transform: uppercase;
 }
 
+.title-two-row {
+  margin: 0 auto 80px;
+}
+.title-two-row .line-text {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.title-two-row .line.line-1 {
+  top: 25%;
+}
+.title-two-row .line.line-2 {
+  top: 75%;
+}
+
 .header {
   position: fixed;
   left: 0;
@@ -610,21 +626,6 @@ b {
 
 .can-do-section {
   padding: 40px 0 50px;
-}
-.can-do-section .title-two-row {
-  margin: 0 auto 80px;
-}
-.can-do-section .title-two-row .line-text {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-}
-.can-do-section .title-two-row .line.line-1 {
-  top: 25%;
-}
-.can-do-section .title-two-row .line.line-2 {
-  top: 75%;
 }
 .can-do-section .can-do-list {
   display: -webkit-box;
@@ -1493,6 +1494,123 @@ b {
   font-weight: 500;
   margin-bottom: 20px;
   text-transform: uppercase;
+}
+
+.coworking-section {
+  padding: 32px 0 64px;
+}
+.coworking-section .title-two-row {
+  margin: 0 auto 32px;
+}
+.coworking-section .info-wrap {
+  padding: 0 100px;
+}
+.coworking-section .info-wrap .info-text {
+  margin-bottom: 32px;
+}
+.coworking-section .info-wrap .info-text p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.coworking-section .info-wrap .info-text p:last-child {
+  margin-bottom: 0;
+}
+.coworking-section .info-wrap .info-text hr {
+  margin: 32px 0;
+  border: 0.5px solid rgba(67, 67, 65, 0.5);
+}
+.coworking-section .info-wrap .info-text hr .half-hr {
+  margin: 16px 0;
+}
+.coworking-section .services-items {
+  margin-bottom: 40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 32px 1fr 32px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 32px;
+}
+.coworking-section .services-items .services-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 48px;
+  border: 1px solid #434341;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.coworking-section .services-items .services-item .services-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.coworking-section .services-items .services-item .services-icon p {
+  font-weight: 400;
+  margin-left: 20px;
+}
+.coworking-section .services-items .services-item svg {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.coworking-section .services-items .services-item:hover {
+  -webkit-box-shadow: 0 0 14px 0 rgba(67, 67, 67, 0.5);
+          box-shadow: 0 0 14px 0 rgba(67, 67, 67, 0.5);
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+.coworking-section .services-items .services-item:hover svg {
+  -webkit-transform: translateX(55px);
+          transform: translateX(55px);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+
+.form-wrap h2 {
+  margin-bottom: 16px;
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+.form-wrap form {
+  max-width: 51%;
+  margin: 0 auto;
+}
+
+.moved-section {
+  padding: 32px 0 40px;
+}
+.moved-section h1 {
+  font-size: 70px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.moved-section .moved-info {
+  margin-bottom: 32px;
+}
+.moved-section .moved-info p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.moved-section .moved-info p:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1180px) {
