@@ -610,6 +610,25 @@ b{
     p {
       line-height: 130%;
     }
+    ul{
+      list-style-type: disc;
+      padding-left: 20px;
+      li{
+        margin-bottom: 5px;
+        color: $primary-color;
+        font-size: 18px;
+        font-weight: 300;
+        b{
+          font-weight: 700;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+        &::marker {
+          font-size: 10px;
+        }
+      }
+    }
   }
 }
 .collab-section{
@@ -815,6 +834,16 @@ b{
           line-height: 0.9;
         }
       }
+    }
+  }
+  &.algorithm-page{
+    .title-two-row {
+      margin: 0 auto 45px;
+    }
+    .algorithm-content {
+      margin-top: 0;
+      border-top: none;
+      padding: 10px 0;
     }
   }
 }
@@ -1312,6 +1341,7 @@ b{
       p {
         text-align: center;
         margin-bottom: 10px;
+        min-height: 22px;
         &:last-child {
           margin-bottom: 0;
         }
@@ -1383,13 +1413,40 @@ b{
     text-align: center;
   }
   .moved-info{
-    margin-bottom: 32px;
+    text-align: center;
     p{
-      text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
       &:last-child{
         margin-bottom: 0;
       }
+    }
+    .btn-default{
+      margin-top: 8px;
+      display: inline-block;
+    }
+  }
+  .variables-wrap{
+    margin: 68px 0 80px;
+    .variable-row {
+      display: flex;
+      align-items: stretch;
+      &:not(:last-child) .variable-item {
+        border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+      }
+    }
+    .variable-column{
+      width: 50%;
+    }
+    .variable-left{
+      padding-right: 118px;
+    }
+    .variable-right{
+      border-left: 0.5px solid rgba(67, 67, 65, 0.5);
+      padding-left: 104px;
+    }
+    .variable-item{
+      padding: 24px 0 34px;
+      height: 100%;
     }
   }
 }

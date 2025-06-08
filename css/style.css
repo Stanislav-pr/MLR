@@ -710,6 +710,25 @@ b {
 .choice-section .card-choice p {
   line-height: 130%;
 }
+.choice-section .card-choice ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.choice-section .card-choice ul li {
+  margin-bottom: 5px;
+  color: #434341;
+  font-size: 18px;
+  font-weight: 300;
+}
+.choice-section .card-choice ul li b {
+  font-weight: 700;
+}
+.choice-section .card-choice ul li:last-child {
+  margin-bottom: 0;
+}
+.choice-section .card-choice ul li::marker {
+  font-size: 10px;
+}
 
 .collab-section {
   padding: 50px 0;
@@ -948,6 +967,14 @@ b {
 }
 .algorithm-section .algorithm-content .algorithm-item.algorithm-item-last .algorithm-item-number {
   line-height: 0.9;
+}
+.algorithm-section.algorithm-page .title-two-row {
+  margin: 0 auto 45px;
+}
+.algorithm-section.algorithm-page .algorithm-content {
+  margin-top: 0;
+  border-top: none;
+  padding: 10px 0;
 }
 
 .footer {
@@ -1511,6 +1538,7 @@ b {
 .coworking-section .info-wrap .info-text p {
   text-align: center;
   margin-bottom: 10px;
+  min-height: 22px;
 }
 .coworking-section .info-wrap .info-text p:last-child {
   margin-bottom: 0;
@@ -1603,14 +1631,45 @@ b {
   text-align: center;
 }
 .moved-section .moved-info {
-  margin-bottom: 32px;
+  text-align: center;
 }
 .moved-section .moved-info p {
-  text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 .moved-section .moved-info p:last-child {
   margin-bottom: 0;
+}
+.moved-section .moved-info .btn-default {
+  margin-top: 8px;
+  display: inline-block;
+}
+.moved-section .variables-wrap {
+  margin: 68px 0 80px;
+}
+.moved-section .variables-wrap .variable-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.moved-section .variables-wrap .variable-row:not(:last-child) .variable-item {
+  border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+}
+.moved-section .variables-wrap .variable-column {
+  width: 50%;
+}
+.moved-section .variables-wrap .variable-left {
+  padding-right: 118px;
+}
+.moved-section .variables-wrap .variable-right {
+  border-left: 0.5px solid rgba(67, 67, 65, 0.5);
+  padding-left: 104px;
+}
+.moved-section .variables-wrap .variable-item {
+  padding: 24px 0 34px;
+  height: 100%;
 }
 
 @media (max-width: 1180px) {
