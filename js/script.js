@@ -40,4 +40,9 @@ jQuery(document).ready(function ($) {
 
     });
 
+    $(document).on('click', '.burger', function () {
+        $(this).toggleClass('open');
+        $(this).closest('.nav-mob').toggleClass('open');
+    });
+
 });

@@ -188,6 +188,32 @@ b{
   }
 }
 
+.languages{
+  a{
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    position: relative;
+    &::after{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 9px;
+      height: 6px;
+      background-image: url('../img/chevron-small.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      top: 8px;
+      right: -11px;
+      transform: translateY(-50%);
+      transition: transform 0.5s ease;
+    }
+    &:hover::after {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}
+
 // Header Styles
 
 .header{
@@ -205,7 +231,6 @@ b{
     justify-content: space-between;
     padding: 15px 0;
     background-color: transparent;
-    border-bottom: 1px solid $border-color;
     .logo{
       line-height: 0;
       a{
@@ -249,28 +274,6 @@ b{
             }
           }
 
-        }
-        .languages{
-          a{
-            position: relative;
-            &::after{
-              content: "";
-              display: block;
-              position: absolute;
-              width: 9px;
-              height: 6px;
-              background-image: url('../img/chevron-small.svg');
-              background-size: cover;
-              background-repeat: no-repeat;
-              top: 8px;
-              right: -11px;
-              transform: translateY(-50%);
-              transition: transform 0.5s ease;
-            }
-            &:hover::after {
-              transform: translateY(-50%) rotate(180deg);
-            }
-          }
         }
       }
     }
@@ -366,7 +369,7 @@ b{
             border-radius: 31px;
             width: fit-content;
             min-width: 260px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
             opacity: 0;
             visibility: hidden;
             transition: opacity 0.2s ease;
@@ -456,6 +459,7 @@ b{
     font-size: 70px;
     text-transform: uppercase;
     font-weight: 500;
+    color: $primary-color;
   }
   .hero-list{
     margin: 33px 0 50px;
@@ -1327,6 +1331,7 @@ b{
     font-weight: 500;
     margin-bottom: 20px;
     text-transform: uppercase;
+    color: $primary-color;
   }
 }
 .coworking-section{
@@ -1411,6 +1416,7 @@ b{
     margin-bottom: 24px;
     text-transform: uppercase;
     text-align: center;
+    color: $primary-color;
   }
   .moved-info{
     text-align: center;
@@ -1450,6 +1456,11 @@ b{
     }
   }
 }
+
+.nav-mob{
+  display: none;
+}
+
 @media (max-width: 1180px) {
   .container{
     padding: 0 15px;
@@ -1506,5 +1517,212 @@ b{
 }
 
 @media (max-width: 992px) {
+  .main {
+    top: 85px;
+  }
+  .header {
+    background-color: rgba(67, 67, 65, 0.5);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    .header-wrapper {
+      padding: 10px;
+      .logo{
+        img{
+          max-width: 60px;
+        }
+      }
+      .header-navigation {
+        display: none;
+      }
+    }
+  }
+  .hero h1 {
+    font-size: 55px;
+  }
+  .nav-mob{
+    display: flex;
+    &.open{
+      .languages{
+        display: flex;
+      }
+    }
+    .languages{
+      margin-right: 32px;
+      display: none;
+      a{
+        &:after{
+          top: 10px;
+        }
+      }
+    }
+    .burger{
+      width: 24px;
+      height: 17px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-end;
+      span{
+        background-color: $primary-color;
+        height: 1px;
+        transition: transform 0.4s ease, width 0.4s ease, opacity 0.3s ease;
+        transform-origin: left center;
+        &.line-1{
+          width: 24px;
+        }
+        &.line-2{
+          width: 16px;
+        }
+        &.line-3{
+          width: 8px;
+        }
+      }
+      &.open {
+        span {
+          &.line-1 {
+            transform: rotate(45deg) translate(7px, -4px);
+            width: 24px;
+          }
+          &.line-2 {
+            opacity: 0;
+            transform: scale(0);
+          }
+          &.line-3 {
+            transform: rotate(-45deg) translate(2px, 6px);
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+  .services-section {
+    .services-items {
+      grid-template-columns: repeat(1, 350px);
+      grid-row-gap: 16px;
+      justify-content: center;
+      .services-item {
+        padding: 16px 45px;
+      }
+    }
+  }
+  .footer {
+    .footer-content {
+      flex-wrap: wrap;
+      .footer-info {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      .footer-contacts{
+        width: 260px;
+      }
+    }
+    .footer-bottom{
+      .footer-bootom-menu {
+        li {
+          padding-right: 40px;
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-default{
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    text-align: center;
+  }
+  .title-two-row {
+    margin: 0 auto 30px;
+  }
+  .title-section {
+    .line-text {
+      font-size: 32px;
+      padding: 0 30px;
+    }
+  }
+  .hero {
+    padding: 17px 0 24px;
+    h1 {
+      font-size: 40px;
+      text-align: center;
+    }
+    .hero-list {
+      margin: 0 0 48px;
+      max-width: 100%;
+      padding: 16px 0 0 20px;
+      border-bottom: none;
+      li{
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .list-columns {
+    column-count: unset;
+  }
+  .default-list {
+    padding: 32px 0 32px 30px;
+    li {
+      margin-bottom: 8px;
+    }
+  }
+  .info-section {
+    .info-wrap {
+      padding: 0;
+      p{
+        text-align: left;
+        &.bold-text{
+          text-align: left;
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+  .can-do-section {
+    .can-do-list {
+      .can-do-right {
+        width: 100%;
+        padding-left: 0;
+        border-left: none;
+        .can-do-item {
+          &:last-child:after {
+            display: none;
+          }
+        }
+      }
+      .can-do-left {
+        width: 100%;
+        padding-right: 0;
+      }
+      .can-do-item {
+        padding: 32px 0;
+        margin-bottom: 0;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50%;
+          height: 1px;
+          background-color: rgba(67, 67, 65, 0.5);
+        }
+        .title-can-do {
+          margin-bottom: 8px;
+          padding-bottom: 0;
+          border-bottom: none;
+          min-height: unset;
+        }
+        .text-can-do {
+          margin-bottom: 0;
+          min-height: unset;
+        }
+      }
+    }
+  }
+
 
 }
