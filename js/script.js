@@ -1,18 +1,30 @@
 jQuery(document).ready(function ($) {
+
+    // accordeon faq
+
     $(document).on('click', '.faqs-item-title', function () {
         $(this).toggleClass('active');
         $(this).next('.faqs-item-content').slideToggle();
     });
+
+
+    // modals
 
     $(".fancybox").fancybox({
         touch: false,
         autoFocus: false,
     });
 
+
+    //slider
+
     let swiper = new Swiper(".swiper-product", {
         slidesPerView: 4,
         spaceBetween: 0,
     });
+
+
+    // title line
 
     $('.title-section.one-line').each(function () {
             let $heading = $(this);
@@ -40,9 +52,14 @@ jQuery(document).ready(function ($) {
 
     });
 
+
+    // burger menu
+
     $(document).on('click', '.burger', function () {
         $(this).toggleClass('open');
+        $('.mobile-menu').toggleClass('open');
         $(this).closest('.nav-mob').toggleClass('open');
     });
+
 
 });
