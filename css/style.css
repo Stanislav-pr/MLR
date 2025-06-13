@@ -2052,6 +2052,11 @@ b {
   .title-page {
     font-size: 55px;
   }
+  .moved-section h1 {
+    font-size: 55px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
 }
 @media (max-width: 768px) {
   .btn-default {
@@ -2226,6 +2231,36 @@ b {
     -ms-grid-columns: 1fr 8px 1fr;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 8px;
+  }
+  .moved-section .moved-info {
+    text-align: left;
+  }
+  .moved-section .moved-info p {
+    margin-bottom: 8px;
+  }
+  .moved-section .variables-wrap {
+    margin: 28px 0 40px;
+  }
+  .moved-section .variables-wrap .variable-item {
+    padding: 24px 0;
+    border-bottom: 0.5px solid rgba(67, 67, 65, 0.5) !important;
+  }
+  .moved-section .variables-wrap .variable-right {
+    border-left: none;
+    padding-left: 0;
+  }
+  .moved-section .variables-wrap .variable-left {
+    padding-right: 0;
+  }
+  .moved-section .variables-wrap .variable-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .moved-section .variables-wrap .variable-row .variable-column {
+    width: 100%;
+  }
+  .form-wrap h2 {
+    font-size: 24px;
   }
 }
 @media (max-width: 568px) {
@@ -2534,6 +2569,12 @@ b {
   }
   .farewell-section .farewell-content {
     margin: 16px 0 0;
+  }
+  .moved-section {
+    padding: 16px 0 40px;
+  }
+  .moved-section h1 {
+    font-size: 40px;
   }
 }
 @media (max-width: 475px) {
