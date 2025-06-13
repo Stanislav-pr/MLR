@@ -21,6 +21,23 @@ jQuery(document).ready(function ($) {
     let swiper = new Swiper(".swiper-product", {
         slidesPerView: 4,
         spaceBetween: 0,
+        breakpoints: {
+            0: {
+                slidesPerView: 1.5,
+            },
+            475: {
+                slidesPerView: 2,
+            },
+            568: {
+                slidesPerView: 2.5,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            992: {
+                slidesPerView: 4,
+            }
+        }
     });
 
 
