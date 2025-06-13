@@ -1926,6 +1926,9 @@ b {
     font-size: 50px;
     padding: 0 30px;
   }
+  .coworking-section .services-items {
+    grid-column-gap: 12px;
+  }
 }
 @media (max-width: 992px) {
   .main {
@@ -2016,7 +2019,7 @@ b {
             transform: rotate(-45deg) translate(2px, 6px);
     width: 24px;
   }
-  .services-section .services-items {
+  .services-section .services-items, .coworking-section .services-items {
     -ms-grid-columns: (350px)[1];
     grid-template-columns: repeat(1, 350px);
     grid-row-gap: 16px;
@@ -2024,7 +2027,7 @@ b {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .services-section .services-items .services-item {
+  .services-section .services-items .services-item, .coworking-section .services-items .services-item {
     padding: 16px 45px;
   }
   .footer {
@@ -2575,6 +2578,41 @@ b {
   }
   .moved-section h1 {
     font-size: 40px;
+  }
+  .coworking-section {
+    padding: 16px 0 40px;
+  }
+  .coworking-section .title-section {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .coworking-section .title-section.title-two-row {
+    margin: 0 0 16px;
+  }
+  .coworking-section .title-section.title-two-row .line-2 {
+    display: none;
+  }
+  .coworking-section .title-section.title-two-row .line-text {
+    padding: 0;
+  }
+  .coworking-section .services-items {
+    margin: 32px 0 24px;
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .coworking-section .info-wrap {
+    padding: 0;
+  }
+  .coworking-section .info-wrap .info-text p {
+    text-align: left;
+  }
+  .coworking-section .info-wrap .info-text hr {
+    margin: 36px 0 24px;
   }
 }
 @media (max-width: 475px) {

@@ -6,7 +6,7 @@ $font-family: Montserrat, sans-serif;
 $font-size: 18px;
 $header-height: 60px;
 $background-primary: #E9DACE;
-
+$border: 0.5px solid rgba(67, 67, 65, 0.5);
 // Default
 
 html, body{
@@ -141,8 +141,8 @@ b{
 }
 .default-list{
   padding: 30px 30px 45px;
-  border-top: 0.5px solid rgba(67, 67, 65, 0.5);
-  border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+  border-top: $border;
+  border-bottom: $border;
   li{
     position: relative;
     margin-bottom: 20px;
@@ -239,7 +239,7 @@ b{
   width: 100%;
   z-index: 1000;
   background-color: $secondary-color;
-  border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+  border-bottom: $border;
 
   .header-wrapper {
     display: flex;
@@ -402,7 +402,7 @@ b{
                 font-weight: 300;
                 position: relative;
                 padding: 10px 38px 10px 16px;
-                border: 0.5px solid rgba(67, 67, 65, 0.5);
+                border: $border;
                 border-radius: 30px;
                 img{
                   width: 27px;
@@ -669,7 +669,7 @@ b{
       width: 75%;
       hr {
         margin: 32px 0;
-        border: 0.5px solid rgba(67, 67, 65, 0.5);
+        border: $border;
       }
       h2{
         font-size: 22px;
@@ -747,8 +747,8 @@ b{
     margin-top: 80px;
     .faqs-item{
       padding: 30px 0 35px;
-      border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
-      border-top: 0.5px solid rgba(67, 67, 65, 0.5);
+      border-bottom: $border;
+      border-top: $border;
       .faqs-item-title{
         font-weight: 700;
         font-size: 18px;
@@ -786,7 +786,7 @@ b{
   }
   .algorithm-content{
     margin-top: 50px;
-    border-top: 0.5px solid rgba(67, 67, 65, 0.5);
+    border-top: $border;
     padding: 60px 0 10px;
     .algorithm-item{
       margin-bottom: 123px;
@@ -877,8 +877,8 @@ b{
   padding-bottom: 35px;
   .footer-content{
     padding: 22px 0 44px;
-    border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
-    border-top: 0.5px solid rgba(67, 67, 65, 0.5);
+    border-bottom: $border;
+    border-top: $border;
     display: flex;
     justify-content: space-between;
     .footer-logo{
@@ -1033,7 +1033,7 @@ b{
         }
         &:first-child{
           padding-left: 0;
-          border-right: 0.5px solid rgba(67, 67, 65, 0.5);
+          border-right: $border;
         }
         &:last-child{
           padding-right: 0;
@@ -1060,7 +1060,7 @@ b{
       flex-wrap: wrap;
       .contacts-item {
         width: 31.5%;
-        border-top: 0.5px solid rgba(67, 67, 65, 0.5);
+        border-top: $border;
         padding-top: 25px;
         a{
           font-weight: 300;
@@ -1145,13 +1145,13 @@ b{
         font-size: 32px;
         font-weight: 500;
         padding: 22px 0;
-        border-top: 0.5px solid rgba(67, 67, 65, 0.5);
-        border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+        border-top: $border;
+        border-bottom: $border;
         margin-bottom: 32px;
       }
       .cremation-text{
         padding: 0 0 32px;
-        border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+        border-bottom: $border;
         margin-bottom: 47px;
         p{
           margin-bottom: 10px;
@@ -1185,7 +1185,7 @@ b{
     }
     hr{
       margin: 32px 0;
-      border: 0.5px solid rgba(67, 67, 65, 0.5);
+      border: $border;
     }
   }
   .happened-list{
@@ -1202,7 +1202,7 @@ b{
         color: $primary-color;
         transition: all 0.3s ease;
         padding: 18px 55px 18px 44px;
-        border: 0.5px solid rgba(67, 67, 65, 0.5);
+        border: $border;
         border-radius: 50px;
         img{
           margin-right: 15px;
@@ -1227,7 +1227,7 @@ b{
         align-items: stretch;
         margin-left: 1px;
         .swiper-slide {
-          border-right: 0.5px solid rgba(67, 67, 65, 0.5);
+          border-right: $border;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1264,7 +1264,7 @@ b{
 .cremation-single-lists{
   margin-top: 25px;
   padding-bottom: 32px;
-  border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+  border-bottom: $border;
   display: flex;
   .cremation-single-list{
     width: 50%;
@@ -1278,7 +1278,7 @@ b{
     }
     &.cremation-single-lists-right{
       padding-left: 115px;
-      border-left: 0.5px solid rgba(67, 67, 65, 0.5);
+      border-left: $border;
     }
     .cremation-list{
       padding-left: 15px;
@@ -1359,10 +1359,10 @@ b{
   }
   .lists-note{
     padding: 32px 0;
-    border-top: 0.5px solid rgba(67, 67, 65, 0.5);
+    border-top: $border;
   }
   .cremation-costs{
-    border-top: 0.5px solid rgba(67, 67, 65, 0.5);
+    border-top: $border;
     .costs-value{
       margin: 26px 0 0;
     }
@@ -1394,7 +1394,7 @@ b{
       }
       hr{
         margin: 32px 0;
-        border: 0.5px solid rgba(67, 67, 65, 0.5);
+        border: $border;
         .half-hr{
           margin: 16px 0;
         }
@@ -1478,7 +1478,7 @@ b{
       display: flex;
       align-items: stretch;
       &:not(:last-child) .variable-item {
-        border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+        border-bottom: $border;
       }
     }
     .variable-column{
@@ -1488,7 +1488,7 @@ b{
       padding-right: 118px;
     }
     .variable-right{
-      border-left: 0.5px solid rgba(67, 67, 65, 0.5);
+      border-left: $border;
       padding-left: 104px;
     }
     .variable-item{
@@ -1600,7 +1600,7 @@ b{
   }
   .mobile-contacts{
     padding: 32px 0 24px;
-    border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+    border-bottom: $border;
     a{
       margin-bottom: 8px;
       font-weight: 300;
@@ -1671,12 +1671,8 @@ b{
     padding: 40px 0 32px;
   }
   .services-section {
-    .services-items {
-      grid-column-gap: 20px;
-    }
-  }
-  .services-section {
     .services-items{
+      grid-column-gap: 20px;
       .services-item{
         &:hover svg {
           -webkit-transform: translateX(35px);
@@ -1702,7 +1698,11 @@ b{
     }
 
   }
-
+  .coworking-section {
+    .services-items {
+      grid-column-gap: 12px;
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -1784,7 +1784,7 @@ b{
       }
     }
   }
-  .services-section {
+  .services-section, .coworking-section {
     .services-items {
       grid-template-columns: repeat(1, 350px);
       grid-row-gap: 16px;
@@ -2037,7 +2037,7 @@ b{
       margin: 28px 0 40px;
       .variable-item {
         padding: 24px 0;
-        border-bottom: 0.5px solid rgba(67, 67, 65, 0.5) !important;
+        border-bottom: $border !important;
       }
       .variable-right {
         border-left: none;
@@ -2096,7 +2096,7 @@ b{
     background-image: none;
     h1 {
       padding-bottom: 14px;
-      border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+      border-bottom: $border;
     }
     .mob-banner {
       position: relative;
@@ -2239,7 +2239,7 @@ b{
         .algorithm-item {
           position: relative;
           padding: 48px 0;
-          border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+          border-bottom: $border;
           margin-bottom: 0;
           &:last-child{
             border-bottom: none;
@@ -2291,7 +2291,7 @@ b{
         max-width: unset;
         padding-bottom: 32px;
         margin-bottom: 32px;
-        border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+        border-bottom: $border;
         p{
           font-size: 18px;
           margin-bottom: 16px;
@@ -2398,6 +2398,38 @@ b{
     padding: 16px 0 40px;
     h1 {
       font-size: 40px;
+    }
+  }
+  .coworking-section{
+    padding: 16px 0 40px;
+    .title-section{
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      &.title-two-row {
+        margin: 0 0 16px;
+        .line-2{
+          display: none;
+        }
+        .line-text{
+          padding: 0;
+        }
+      }
+    }
+    .services-items{
+      margin: 32px 0 24px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .info-wrap {
+      padding: 0;
+      .info-text{
+        p{
+          text-align: left;
+        }
+        hr {
+          margin: 36px 0 24px;
+        }
+      }
     }
   }
 }
