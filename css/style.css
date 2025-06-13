@@ -1203,6 +1203,8 @@ b {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .contacts-section .contacts-wrap .contacts-items .contacts-item {
   width: 31.5%;
@@ -1250,7 +1252,7 @@ b {
   margin-right: 0;
 }
 .contacts-section .contacts-wrap .contacts-items .contacts-item .social-contacts-item .socials a img {
-  width: 20px;
+  width: 28px;
   -webkit-transition: -webkit-filter 0.3s ease;
   transition: -webkit-filter 0.3s ease;
   transition: filter 0.3s ease;
@@ -1263,7 +1265,6 @@ b {
 
 #map {
   width: 100%;
-  height: 485px;
   margin-top: 47px;
 }
 
@@ -1690,7 +1691,7 @@ b {
 }
 
 .facebook-mobile {
-  display: none;
+  display: none !important;
 }
 
 .algorithm-section .title-section br {
@@ -1848,6 +1849,10 @@ b {
   font-size: 16px;
 }
 
+#map img {
+  width: 100%;
+}
+
 @media (max-width: 1180px) {
   .container {
     padding: 0 15px;
@@ -1980,6 +1985,9 @@ b {
   .services-section .services-items .services-item {
     padding: 16px 45px;
   }
+  .footer {
+    top: 85px;
+  }
   .footer .footer-content {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -2101,6 +2109,35 @@ b {
   }
   .choice-section .card-choice .choice-count {
     font-size: 130px;
+  }
+  .contacts-section {
+    padding: 20px 0 30px;
+  }
+  .contacts-section .contacts-wrap .contacts-info {
+    text-align: left;
+    margin-bottom: 48px;
+  }
+  .contacts-section .contacts-wrap .contacts-info p {
+    margin-bottom: 8px;
+  }
+  .contacts-section .contacts-wrap .contacts-info p:last-child {
+    margin-bottom: 0;
+  }
+  .contacts-section .contacts-wrap .contacts-items .contacts-item {
+    width: 100%;
+    padding: 22px 0 48px;
+  }
+  .contacts-section .contacts-wrap .contacts-items .contacts-item a {
+    margin-bottom: 18px;
+  }
+  .contacts-section .contacts-wrap .contacts-items .contacts-item:last-child {
+    padding: 22px 0;
+  }
+  .contacts-section .contacts-wrap .contacts-items .contacts-item .contact-facebook img {
+    width: 45px;
+  }
+  .contacts-section #map {
+    margin-top: 0;
   }
 }
 @media (max-width: 568px) {
@@ -2346,7 +2383,7 @@ b {
     display: none !important;
   }
   .footer .footer-content .facebook-mobile {
-    display: block;
+    display: block !important;
     margin-top: 12px;
   }
   .footer .footer-bottom {

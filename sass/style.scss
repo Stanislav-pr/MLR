@@ -1044,6 +1044,7 @@ b{
     .contacts-items{
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       .contacts-item {
         width: 31.5%;
         border-top: 0.5px solid rgba(67, 67, 65, 0.5);
@@ -1078,7 +1079,7 @@ b{
                 margin-right: 0;
               }
               img{
-                width: 20px;
+                width: 28px;
                 transition: filter 0.3s ease;
               }
               &:hover img{
@@ -1094,7 +1095,7 @@ b{
 
 #map{
   width: 100%;
-  height: 485px;
+  //height: 485px;
   margin-top: 47px;
 }
 
@@ -1467,7 +1468,7 @@ b{
   display: none;
 }
 .facebook-mobile{
-  display: none;
+  display: none !important;
 }
 .algorithm-section{
   .title-section{
@@ -1604,6 +1605,11 @@ b{
   .mobile-copyright{
     margin-top: 22px;
     font-size: 16px;
+  }
+}
+#map{
+  img{
+    width: 100%;
   }
 }
 
@@ -1752,6 +1758,7 @@ b{
     }
   }
   .footer {
+    top: 85px;
     .footer-content {
       flex-wrap: wrap;
       .footer-info {
@@ -1891,7 +1898,41 @@ b{
       }
     }
   }
-
+  .contacts-section{
+    padding: 20px 0 30px;
+    .contacts-wrap{
+      .contacts-info {
+        text-align: left;
+        margin-bottom: 48px;
+        p{
+          margin-bottom: 8px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      .contacts-items{
+        .contacts-item{
+          width: 100%;
+          padding: 22px 0 48px;
+          a{
+            margin-bottom: 18px;
+          }
+          &:last-child{
+            padding: 22px 0;
+          }
+          .contact-facebook{
+            img{
+              width: 45px;
+            }
+          }
+        }
+      }
+    }
+    #map{
+      margin-top: 0;
+    }
+  }
 
 }
 
@@ -2145,7 +2186,7 @@ b{
         display: none !important;
       }
       .facebook-mobile{
-        display: block;
+        display: block !important;
         margin-top: 12px;
       }
     }
