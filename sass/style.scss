@@ -1112,6 +1112,25 @@ b{
   margin-top: 47px;
 }
 
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  z-index: 10000;
+  padding: 15px;
+}
+.swiper-pagination-bullet {
+  width: 46px;
+  height: 1px;
+  background-color: #434341;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  border-radius: 0;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
 
 // Cremation
 

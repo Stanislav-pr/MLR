@@ -1281,6 +1281,32 @@ b {
   margin-top: 47px;
 }
 
+.swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 14px;
+  z-index: 10000;
+  padding: 15px;
+}
+
+.swiper-pagination-bullet {
+  width: 46px;
+  height: 1px;
+  background-color: #434341;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  border-radius: 0;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
 .page-hero {
   padding: 25px 0 40px;
 }

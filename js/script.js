@@ -21,21 +21,36 @@ jQuery(document).ready(function ($) {
     let swiper = new Swiper(".swiper-product", {
         slidesPerView: 4,
         spaceBetween: 0,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
         breakpoints: {
             0: {
                 slidesPerView: 1.5,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
             },
             475: {
                 slidesPerView: 2,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
             },
             568: {
                 slidesPerView: 2.5,
+                pagination: false,
             },
             768: {
                 slidesPerView: 3,
+                pagination: false,
             },
             992: {
                 slidesPerView: 4,
+                pagination: false,
             }
         }
     });
