@@ -14,14 +14,18 @@
 	<?php wp_head();?>
 </head>
 
+<?php
 
+$logo = get_field('logo', 'option');
+
+?>
 <body <?php body_class() ?>>
     <header class="header">
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo">
-                    <a href="#">
-                        <img src="img/logo.svg" alt="MIR Logo">
+                    <a href="<?= get_home_url(); ?>">
+                        <img src="<?= $logo['url']; ?>" alt="<?= $logo['url']; ?>">
                     </a>
                 </div>
                 <div class="header-navigation">
