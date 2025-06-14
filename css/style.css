@@ -2223,6 +2223,12 @@ b {
     top: 0;
     bottom: unset;
   }
+  .page-hero .cremation-hero-content .cremation-hero-img.top-img {
+    width: 100%;
+  }
+  .page-hero .cremation-hero-content .cremation-hero-img.top-img img {
+    width: 100%;
+  }
   .page-hero .cremation-hero-content .cremation-hero-text {
     width: 100%;
   }
@@ -2296,6 +2302,25 @@ b {
   }
   .cremation-costs .costs-note {
     display: none;
+  }
+  .lists-section {
+    padding: 0 0 30px;
+  }
+  .lists-section .lists-content {
+    margin: 24px 0;
+    padding: 0;
+  }
+  .lists-section .lists-content ul li {
+    padding-right: 0;
+  }
+  .lists-section .cremation-costs {
+    padding: 0;
+  }
+  .lists-section .cremation-costs .costs-value {
+    margin: 22px 0 0;
+  }
+  .lists-section .cremation-costs .costs-value .value-cost {
+    margin-bottom: 16px;
   }
 }
 @media (max-width: 568px) {
@@ -2670,6 +2695,9 @@ b {
     padding-top: 32px;
     border-left: none;
   }
+  .lists-section .lists-note {
+    padding: 24px 0;
+  }
 }
 @media (max-width: 475px) {
   .hero .mob-banner {
@@ -2702,6 +2730,9 @@ b {
   .title-section .line-2 {
     bottom: 8px;
     top: unset;
+  }
+  .title-section.one-line.multiline .line-2 {
+    top: 87%;
   }
   .farewell-section .title-section .line-2 {
     top: 75%;

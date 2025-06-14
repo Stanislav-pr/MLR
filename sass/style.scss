@@ -2009,6 +2009,12 @@ b{
         transform: translateX(-50%);
         top: 0;
         bottom: unset;
+        &.top-img{
+          width: 100%;
+          img{
+            width: 100%;
+          }
+        }
       }
       .cremation-hero-text {
         width: 100%;
@@ -2091,6 +2097,27 @@ b{
     }
     .costs-note{
       display: none;
+    }
+  }
+  .lists-section {
+    padding: 0 0 30px;
+    .lists-content{
+      margin: 24px 0;
+      padding: 0;
+      ul{
+        li{
+          padding-right: 0;
+        }
+      }
+    }
+    .cremation-costs {
+      padding: 0;
+      .costs-value {
+        margin: 22px 0 0;
+        .value-cost{
+          margin-bottom: 16px;
+        }
+      }
     }
   }
 
@@ -2492,6 +2519,11 @@ b{
       }
     }
   }
+  .lists-section {
+    .lists-note {
+      padding: 24px 0;
+    }
+  }
 }
 
 @media (max-width: 475px){
@@ -2534,6 +2566,11 @@ b{
     .line-2{
       bottom: 8px;
       top: unset;
+    }
+    &.one-line.multiline {
+      .line-2 {
+        top: 87%;
+      }
     }
   }
   .farewell-section {
