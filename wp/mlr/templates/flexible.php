@@ -9,3 +9,410 @@
     <?php endwhile; ?>
 
 <?php endif; ?>
+
+<section class="hero">
+    <div class="container">
+        <h1>Міжнародні <br> перевезення <br>померлих</h1>
+    </div>
+    <div class="mob-banner"></div>
+    <div class="container">
+        <ul class="default-list hero-list">
+            <li>Забезпечимо <b>транспортування померлого</b> або <b>урни</b></li>
+            <li>Організуємо <b>кремацію</b></li>
+            <li>Підготуємо всі документи</li>
+        </ul>
+        <a href="#" class="btn-default">звʼязатись</a>
+    </div>
+</section>
+<section class="info-section">
+    <div class="container">
+        <h2 class="title-section"><span class="line line-1"></span><span class="line-text">Хто
+          ми</span><span class="line line-2"></span></h2>
+        <div class="info-wrap">
+            <div class="info-text">
+                <p>Ми надаємо ритуальні послуги по всій Україні вже понад 17 років, допомагаючи родинам у найскладніші моменти.</p>
+                <p>Наша компанія спеціалізується на міжнародному перевезенні померлих, кремацій та оформленні всіх необхідних документів.</p>
+                <p>Пропонуємо найвигідніші ціни, зберігаючи високий рівень якості обслуговування.</p>
+                <p>Коли дорога людина пішла з життя далеко від дому, важливо повернути її на Батьківщину швидко та без зайвих труднощів.</p>
+            </div>
+            <ul class="default-list list-columns">
+                <li>Перевезення померлих з-за кордону в Україну, та з України по всьому світу</li>
+                <li>Повний юридичний супровід</li>
+                <li>Логістика по всій Україні</li>
+                <li>Оптимальні ціни та оперативність</li>
+            </ul>
+            <p class="bold-text">Ми беремо на себе всі складнощі, щоб повернення близької людини додому відбулося без затримок і проблем. Ми завжди на зв’язку, щоб підтримати та вирішити всі питання.</p>
+        </div>
+    </div>
+</section>
+<section class="services-section">
+    <div class="container">
+        <h2 class="title-section"><span class="line line-1"></span><span class="line-text">наші послуги</span><span class="line line-2"></span></h2>
+        <div class="services-items">
+            <a href="#" class="services-item">
+                <div class="services-icon">
+                    <img src="img/lenta.svg" alt="">
+                    <p>Перевезення <br> померлих</p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="8" viewBox="0 0 33 8" fill="none">
+                    <path d="M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4V4.5H32V4V3.5H0V4Z" fill="#434341"/>
+                </svg>
+            </a>
+            <a href="#" class="services-item">
+                <div class="services-icon">
+                    <img src="img/urna.svg" alt="">
+                    <p>Перевезення <br> урни</p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="8" viewBox="0 0 33 8" fill="none">
+                    <path d="M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4V4.5H32V4V3.5H0V4Z" fill="#434341"/>
+                </svg>
+            </a>
+            <a href="#" class="services-item">
+                <div class="services-icon">
+                    <img src="img/candle.svg" alt="">
+                    <p>Кремація в <br> Європі</p>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="8" viewBox="0 0 33 8" fill="none">
+                    <path d="M32.3536 4.35355C32.5488 4.15829 32.5488 3.84171 32.3536 3.64645L29.1716 0.464466C28.9763 0.269204 28.6597 0.269204 28.4645 0.464466C28.2692 0.659728 28.2692 0.976311 28.4645 1.17157L31.2929 4L28.4645 6.82843C28.2692 7.02369 28.2692 7.34027 28.4645 7.53553C28.6597 7.7308 28.9763 7.7308 29.1716 7.53553L32.3536 4.35355ZM0 4V4.5H32V4V3.5H0V4Z" fill="#434341"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="can-do-section">
+    <div class="container">
+        <h2 class="title-section title-two-row"><span class="line line-1"></span><div class="line-text">що ми можемо<br>зробити для вас</div><span class="line line-2"></span></h2>
+        <div class="can-do-list">
+            <div class="can-do-left">
+                <div class="can-do-item">
+                    <div class="title-can-do">Організуємо перевезення померлого з-за кордону в Україну</div>
+                    <div class="text-can-do">Ми забезпечимо швидке та безпечне транспортування з будь-якої країни до України.</div>
+                </div>
+                <div class="can-do-item">
+                    <div class="title-can-do">Надамо зручний спосіб оплати та детальну консультацію</div>
+                    <div class="text-can-do">Ми забезпечуємо гнучкі умови оплати і консультуємо щодо всіх етапів процесу перевезення.</div>
+                </div>
+                <div class="can-do-item">
+                    <div class="title-can-do">Забезпечимо найнижчі ціни на ринку</div>
+                    <div class="text-can-do">Оптимізуємо витрати, гарантуючи вигідні ціни та високу якість послуг.</div>
+                </div>
+                <div class="can-do-item">
+                    <div class="title-can-do">Забезпечимо цілісність і безпеку померлого протягом усього транспортування</div>
+                    <div class="text-can-do">Наші транспортні засоби відповідають усім вимогам безпеки та гігієни.</div>
+                </div>
+            </div>
+            <div class="can-do-right">
+                <div class="can-do-item">
+                    <div class="title-can-do">Перевеземо померлого із України по всьому світу</div>
+                    <div class="text-can-do">Ми організуємо перевезення з України в будь-яку точку світу, з урахуванням всіх міжнародних вимог.</div>
+                </div>
+                <div class="can-do-item">
+                    <div class="title-can-do">Оформимо необхідні санітарні сертифікати та дозволи</div>
+                    <div class="text-can-do">Ми подбаємо про відповідність всіх стандартів безпеки і санітарії при транспортуванні.</div>
+                </div>
+                <div class="can-do-item">
+                    <div class="title-can-do">Виконаємо транспортування в будь-який регіон України</div>
+                    <div class="text-can-do">Ми організуємо перевезення в будь-яку точку України.</div>
+                </div>
+                <div class="can-do-item">
+                    <div class="title-can-do">Забезпечимо виконання всіх необхідних формальностей</div>
+                    <div class="text-can-do">Ми візьмемо на себе організацію всіх документів, дозволів та митних процедур.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="choice-section">
+    <div class="container">
+        <h2 class="title-section"><span class="line line-1"></span><span class="line-text">Чому варто обрати нас?</span><span class="line line-2"></span></h2>
+        <div class="choice-wrap">
+            <div class="card-choice">
+                <div class="choice-count">01</div>
+                <div class="card-choice-title">Гарантована якість</div>
+                <p>Досвідчена команда подає про кожну деталь — від транспортування, логістичного забезпечення до стандартів та з повною до кінця помірного.</p>
+            </div>
+            <div class="card-choice">
+                <div class="choice-count">02</div>
+                <div class="card-choice-title">Найвигідніші ціни</div>
+                <p>Оптимізовано всі етапи виробництва нам пропонувати доступну вартість витрати якостей посту.</p>
+            </div>
+            <div class="card-choice">
+                <div class="choice-count">03</div>
+                <div class="card-choice-title">Оригінальні супровиди</div>
+                <p>Беремо на себе всі формальності, зводимо оформлення- документи, консульські процедури та митне регулювання.</p>
+            </div>
+            <div class="card-choice">
+                <div class="choice-count">04</div>
+                <div class="card-choice-title">Гнучка логістика</div>
+                <p>Доставлення по території з Європи, Європей та Росій, а також по всі території України.</p>
+            </div>
+            <div class="card-choice">
+                <div class="choice-count">05</div>
+                <div class="card-choice-title">Сучасний автопарк</div>
+                <p>Спеціально обладнаний автотранспорт забезпе-чує транспортування вішільно до санітарних норм.</p>
+            </div>
+            <div class="card-choice">
+                <div class="choice-count">06</div>
+                <div class="card-choice-title">Швидше прирістка</div>
+                <p>Ми працюємо 24/7, гарантуючи швидке реагування та персональний підхід до кожного клієнта.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="collab-section">
+    <div class="container">
+        <h2 class="nothalf-title">
+          <span class="line-1">
+            <img src="img/ukraine.svg" alt="">
+          </span>
+            <div class="line-wrap"><span class="line-text">MFA
+          UA</span><span class="line-2"></span></div>
+        </h2>
+        <div class="collab-wrap">
+            <div class="collab-flag">
+                <img src="img/ukraine.svg" alt="">
+            </div>
+            <div class="collab-content">
+                <h3>Співпраця з дипломатичними представництвами України за кордоном.</h3>
+                <p>Шановні представники української дипломатії – Посли, Консули, Почесні Консули, секретарі Консульських Питань!</p>
+                <p>Ми розуміємо, що до вас звертаються родини, які опинилися в складній ситуації, не знаючи місцевих норм, процедур та вимог. У такі моменти важливо мати надійного партнера, який не лише допоможе із транспортуванням тіла померлого в Україну, а й надасть емоційну підтримку рідним.</p>
+                <hr>
+                <p>Наша компанія має великий досвід співпраці з дипломатичними установами по всьому світу. Ми завжди відкриті до контактів з українськими представництвами, готові оперативно надати консультацію та відповісти на будь-які запитання щодо нашої діяльності.</p>
+                <hr>
+                <div class="list-title">
+                    <h2>Наші переваги:</h2>
+                    <ul>
+                        <li>Юридична компетентність у міжнародному просторі</li>
+                        <li>Вільне володіння мовами міжнародної дипломатії</li>
+                        <li>Глибоке розуміння процедур репатріації</li>
+                    </ul>
+                </div>
+
+                <hr>
+                <h3>Ми прагнемо бути надійним партнером у спільній місії допомоги українцям за кордоном. Зв’яжіться з нами – ми завжди на зв’язку.</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="review-section">
+    <div class="container">
+        <h2 class="title-section"><span class="line line-1"></span><span class="line-text">що про нас кажуть</span><span class="line line-2"></span></h2>
+    </div>
+</section>
+<section class="partners-section">
+    <div class="container">
+        <h2 class="title-section"><span class="line line-1"></span><span class="line-text">наші друзі і партнери</span><span class="line line-2"></span></h2>
+    </div>
+    <div class="marquee-wrapper">
+        <div class="marquee">
+            <div class="marquee-content">
+                <img src="img/legion.png" alt="">
+                <img src="img/np.png" alt="">
+                <img src="img/ritpom.png" alt="">
+                <img src="img/veles.png" alt="">
+            </div>
+            <div class="marquee-content">
+                <img src="img/legion.png" alt="">
+                <img src="img/np.png" alt="">
+                <img src="img/ritpom.png" alt="">
+                <img src="img/veles.png" alt="">
+            </div>
+            <div class="marquee-content">
+                <img src="img/legion.png" alt="">
+                <img src="img/np.png" alt="">
+                <img src="img/ritpom.png" alt="">
+                <img src="img/veles.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faqs-section">
+    <div class="container">
+        <h2 class="title-section one-line"><span class="line-text">Поширені питання</span><span class="line line-2"></span></h2>
+        <div class="faqs-content">
+            <p><b>Перевезення тіла померлого з-за кордону в Україну є складним процесом, що вимагає уваги до багатьох деталей.</b></p>
+            <p>Нижче наведено відповіді на поширені запитання, які допоможуть вам зрозуміти цей процес та підкреслять переваги звернення до нашої компанії.</p>
+        </div>
+        <div class="faqs-accordion">
+            <div class="faqs-item">
+                <div class="faqs-item-title">
+                    Що робити, якщо людина померла за кордоном?
+                </div>
+                <div class="faqs-item-content" style="display: none;">
+                    <p>У разі смерті близької людини за кордоном, важливо негайно зв'язатися з місцевими органами влади. Зверніться до місцевої поліції або медичних служб для офіційної констатації смерті. Зателефонуйте 911</p>
+                </div>
+            </div>
+            <div class="faqs-item">
+                <div class="faqs-item-title">
+                    Які документи необхідні для перевезення померлого в Україну?
+                </div>
+                <div class="faqs-item-content" style="display: none;">
+                    <p>Необхідні документи включають свідоцтво про смерть, дозвіл на транспортування від місцевих органів влади та інші специфічні документи залежно від країни. Наша компанія бере на себе оформлення всіх необхідних документів, щоб полегшити цей процес для вас.</p>
+                </div>
+            </div>
+            <div class="faqs-item">
+                <div class="faqs-item-title">
+                    Скільки коштує перевезення тіла з-за кордону в Україну?
+                </div>
+                <div class="faqs-item-content" style="display: none;">
+                    <p>Вартість залежить від країни, відстані та специфічних вимог. Ми пропонуємо конкурентоспроможні ціни та індивідуальний підхід до кожного клієнта. Для отримання точної вартості рекомендуємо зв'язатися з нами для консультації.</p>
+                </div>
+            </div>
+            <div class="faqs-item">
+                <div class="faqs-item-title">
+                    Як довго триває процес перевезення тіла в Україну?
+                </div>
+                <div class="faqs-item-content" style="display: none;">
+                    <p>Тривалість процесу залежить від країни перебування та необхідних процедур. Ми докладаємо всіх зусиль, щоб забезпечити швидке та безпечне перевезення, мінімізуючи затримки.</p>
+                </div>
+            </div>
+            <div class="faqs-item">
+                <div class="faqs-item-title">
+                    Чи потрібно родичам їхати до країни, де сталася смерть?
+                </div>
+                <div class="faqs-item-content" style="display: none;">
+                    <p>У більшості випадків це не є необхідним. Наша компанія може взяти на себе всі організаційні моменти на місці, що дозволяє родичам залишатися в Україні та готуватися до поховання</p>
+                </div>
+            </div>
+            <div class="faqs-item">
+                <div class="faqs-item-title">
+                    Які послуги надає ваша компанія під час перевезення тіла?
+                </div>
+                <div class="faqs-item-content" style="display: none;">
+                    <p>Ми забезпечуємо повний спектр послуг, включаючи оформлення документів, підготовку тіла до транспортування, надання спеціалізованої труни та безпосередньо транспортування до місця поховання в Україні.</p>
+                </div>
+            </div>
+            <div class="faqs-item">
+                <div class="faqs-item-title">
+                    Чи можна перевезти урну з прахом замість тіла?
+                </div>
+                <div class="faqs-item-content" style="display: none;">
+                    <p>Так, ми надаємо послуги з перевезення урн з прахом. Цей процес часто є менш складним та більш економічно вигідним.</p>
+                </div>
+            </div>
+            <div class="faqs-item">
+                <div class="faqs-item-title">
+                    Як забезпечується безпека та гігієна під час транспортування?
+                </div>
+                <div class="faqs-item-content" style="display: none;">
+                    <p>Ми дотримуємося всіх міжнародних стандартів та норм щодо безпеки та гігієни під час транспортування тіл, використовуючи спеціалізовані транспортні засоби та обладнання.</p>
+                </div>
+            </div>
+            <div class="faqs-item">
+                <div class="faqs-item-title">
+                    Чи надаєте ви консультації щодо організації поховання в Україні?
+                </div>
+                <div class="faqs-item-content" style="display: none;">
+                    <p>Так, ми надаємо консультації та підтримку щодо організації поховання в Україні, співпрацюючи з місцевими ритуальними службами для забезпечення гідного прощання.</p>
+                </div>
+            </div>
+            <div class="faqs-item">
+                <div class="faqs-item-title">
+                    Як зв'язатися з вашою компанією для отримання допомоги?
+                </div>
+                <div class="faqs-item-content" style="display: none;">
+                    <p>Ви можете зв'язатися з нами за телефоном або електронною поштою, вказаними на нашому офіційному сайті. Ми працюємо цілодобово, щоб надати вам необхідну підтримку у важкий момент.</p>
+                </div>
+            </div>
+        </div>
+        <div class="faqs-content">
+            <p><b>Звертаючись до нашої компанії, ви отримуєте професійну допомогу та підтримку на кожному етапі процесу перевезення, що дозволяє зменшити ваші турботи та забезпечити гідне прощання з близькою людиною.</b></p>
+        </div>
+    </div>
+</section>
+<section class="algorithm-section">
+    <div class="container">
+        <h2 class="title-section"><span class="line line-1"></span><span class="line-text">Алгоритм<br> дій</span><span
+                class="line line-2"></span></h2>
+        <div class="algorithm-wrap">
+            <div class="algorithm-info">
+                <p><b>Алгоритм дій для родичів у разі смерті близької людини за кордоном.</b></p>
+                <p>Якщо ваш родич помер за кордоном, цей процес може здатися складним і заплутаним. Щоб полегшити вам цей важкий момент, ми підготували покроковий алгоритм дій, що допоможе швидко організувати перевезення тіла в Україну.</p>
+            </div>
+            <div class="algorithm-content">
+                <div class="algorithm-item">
+                    <div class="algorithm-item-number">01</div>
+                    <div class="algorithm-item-content">
+                        <div class="algorithm-item-title">Повідомлення місцевих органів</div>
+                        <ul>
+                            <li>Зв'яжіться з місцевою поліцією або медичною установою, якщо смерть настала не в лікарні.</li>
+                            <li>Отримайте офіційне підтвердження смерті – це може бути медичне свідоцтво або довідка про смерть.</li>
+                        </ul>
+                        <p class="note">Важливо! Якщо ви не знаєте, до кого звернутися, зателефонуйте нам — ми допоможемо вам з перших хвилин організації процесу.</p>
+                    </div>
+                </div>
+                <div class="algorithm-item">
+                    <div class="algorithm-item-number">02</div>
+                    <div class="algorithm-item-content">
+                        <div class="algorithm-item-title">Збір документів</div>
+                        <p class="list-title">Для транспортування тіла померлого необхідно підготувати:</p>
+                        <ul>
+                            <li>Свідоцтво про смерть (видане місцевими органами влади).</li>
+                            <li>Дозвіл на перевезення тіла.</li>
+                            <li>Документи на репатріацію (залежно від країни перебування).</li>
+                            <li>Паспорт померлого та документи родичів (за необхідності).</li>
+                        </ul>
+                        <p class="note">Наша компанія оформлює всі документи без зайвого клопоту для вас.</p>
+                    </div>
+                </div>
+                <div class="algorithm-item">
+                    <div class="algorithm-item-number">03</div>
+                    <div class="algorithm-item-content">
+                        <div class="algorithm-item-title">Вибір способу перевезення</div>
+                        <ul>
+                            <li><b>Автотранспортом</b> – швидко та економічно (оптимальний варіант для більшості країн Європи).</li>
+                            <li><b>Авіатранспортом</b> – при необхідності перевезення з більш віддалених країн.</li>
+                        </ul>
+                        <p class="note">Ми організуємо найбільш вигідний варіант транспортування, враховуючи всі ваші побажання.</p>
+                    </div>
+                </div>
+                <div class="algorithm-item">
+                    <div class="algorithm-item-number">04</div>
+                    <div class="algorithm-item-content">
+                        <div class="algorithm-item-title">Підготовка тіла до транспортування</div>
+                        <ul>
+                            <li>Спеціальна підготовка відповідно до міжнародних санітарних норм.</li>
+                            <li>Надання спеціального герметичного цинкового контейнера або труни.</li>
+                        </ul>
+                        <p class="note">Ми забезпечимо дотримання всіх вимог, щоб уникнути можливих проблем на митниці.</p>
+                    </div>
+                </div>
+                <div class="algorithm-item">
+                    <div class="algorithm-item-number">05</div>
+                    <div class="algorithm-item-content">
+                        <div class="algorithm-item-title">Перевезення в Україну</div>
+                        <ul>
+                            <li>Організація транспортування до місця поховання або кремації в Україні.</li>
+                            <li>Координація всіх митних процедур.</li>
+                        </ul>
+                        <p class="note">Наша компанія гарантує швидке та безпечне транспортування без зайвих затримок.</p>
+                    </div>
+                </div>
+                <div class="algorithm-item">
+                    <div class="algorithm-item-number">06</div>
+                    <div class="algorithm-item-content">
+                        <div class="algorithm-item-title">Завершальні формальності</div>
+                        <ul>
+                            <li>Реєстрація смерті в органах РАЦС в Україні.</li>
+                            <li>Підготовка до поховання або кремації.</li>
+                        </ul>
+                        <p class="note">Якщо вам потрібна додаткова допомога – ми завжди поруч.</p>
+                    </div>
+                </div>
+                <div class="algorithm-item algorithm-item-last">
+                    <div class="algorithm-item-number">*</div>
+                    <div class="algorithm-item-content">
+                        <div class="algorithm-item-title">Чому варто звернутися саме до нас?</div>
+                        <ul>
+                            <li>Ми беремо на себе всі бюрократичні питання.</li>
+                            <li>Оперативне перевезення за найнижчими цінами без компромісів у якості.</li>
+                            <li>Повна відповідність міжнародним нормам.</li>
+                            <li>Доступність 24/7 – допомога в будь-який момент.</li>
+                        </ul>
+                        <p class="note">Зв’яжіться з нами прямо зараз, і ми допоможемо вам на кожному етапі!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
