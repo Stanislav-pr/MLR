@@ -2704,6 +2704,12 @@ b {
   .lists-section .lists-note {
     padding: 24px 0;
   }
+  .moved .choice-section {
+    padding: 32px 0 56px;
+  }
+  .moved .coworking-section {
+    padding: 0 0 40px;
+  }
 }
 @media (max-width: 475px) {
   .hero .mob-banner {
