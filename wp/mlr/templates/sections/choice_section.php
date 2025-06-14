@@ -1,15 +1,15 @@
 <?php
 
-
+$title = get_sub_field('title')
 
 ?>
 
 <section class="choice-section">
     <div class="container">
-        <?php if ($title = get_sub_field('title')) : ?>
+        <?php if ($title) : ?>
             <h2 class="title-section">
                 <span class="line line-1"></span>
-                <span class="line-text"><?php echo esc_html($title); ?></span>
+                <span class="line-text"><?= $title; ?></span>
                 <span class="line line-2"></span>
             </h2>
         <?php endif; ?>
