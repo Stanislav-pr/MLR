@@ -1649,6 +1649,9 @@ b{
     width: 100%;
   }
 }
+.costs-note-mobile{
+  display: none;
+}
 
 @media (max-width: 1180px) {
   .container{
@@ -2059,6 +2062,38 @@ b{
       font-size: 24px;
     }
   }
+  .cremation-hero{
+    padding: 20px 0 24px;
+  }
+  .cremation-single-lists {
+    .cremation-single-list{
+      &.cremation-single-lists-left {
+        padding-right: 20px;
+      }
+      &.cremation-single-lists-right {
+        padding-left: 20px;
+      }
+    }
+  }
+  .cremation-costs{
+    padding-top: 32px;
+    .costs-value{
+      flex-wrap: wrap;
+      margin: 0;
+      .value-cost{
+        max-width: unset;
+        width: 100%;
+      }
+      .costs-note-mobile{
+        display: block;
+        margin: 8px 0 32px;
+      }
+    }
+    .costs-note{
+      display: none;
+    }
+  }
+
 }
 
 @media (max-width: 568px){
@@ -2432,6 +2467,31 @@ b{
       }
     }
   }
+  .cremation-single-lists {
+    flex-wrap: wrap;
+    margin-top: 32px;
+    .cremation-single-list{
+      width: 100%;
+      .cremation-title-list{
+        margin-bottom: 16px;
+      }
+      .cremation-list{
+        li{
+          margin-bottom: 15px;
+        }
+      }
+      &.cremation-single-lists-left {
+        padding-right: 0;
+        padding-bottom: 40px;
+        border-bottom: $border;
+      }
+      &.cremation-single-lists-right {
+        padding-left: 0;
+        padding-top: 32px;
+        border-left: none;
+      }
+    }
+  }
 }
 
 @media (max-width: 475px){
@@ -2467,6 +2527,9 @@ b{
       }
     }
   }
+  .title-page {
+    font-size: 40px;
+  }
   .title-section{
     .line-2{
       bottom: 8px;
@@ -2487,5 +2550,10 @@ b{
       }
     }
   }
-
+  .cremation-hero{
+    .title-section .line-2 {
+      bottom: unset;
+      top: 50%;
+    }
+  }
 }

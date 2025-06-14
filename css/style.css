@@ -1895,6 +1895,10 @@ b {
   width: 100%;
 }
 
+.costs-note-mobile {
+  display: none;
+}
+
 @media (max-width: 1180px) {
   .container {
     padding: 0 15px;
@@ -2265,6 +2269,34 @@ b {
   .form-wrap h2 {
     font-size: 24px;
   }
+  .cremation-hero {
+    padding: 20px 0 24px;
+  }
+  .cremation-single-lists .cremation-single-list.cremation-single-lists-left {
+    padding-right: 20px;
+  }
+  .cremation-single-lists .cremation-single-list.cremation-single-lists-right {
+    padding-left: 20px;
+  }
+  .cremation-costs {
+    padding-top: 32px;
+  }
+  .cremation-costs .costs-value {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0;
+  }
+  .cremation-costs .costs-value .value-cost {
+    max-width: unset;
+    width: 100%;
+  }
+  .cremation-costs .costs-value .costs-note-mobile {
+    display: block;
+    margin: 8px 0 32px;
+  }
+  .cremation-costs .costs-note {
+    display: none;
+  }
 }
 @media (max-width: 568px) {
   .title-section {
@@ -2614,6 +2646,30 @@ b {
   .coworking-section .info-wrap .info-text hr {
     margin: 36px 0 24px;
   }
+  .cremation-single-lists {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 32px;
+  }
+  .cremation-single-lists .cremation-single-list {
+    width: 100%;
+  }
+  .cremation-single-lists .cremation-single-list .cremation-title-list {
+    margin-bottom: 16px;
+  }
+  .cremation-single-lists .cremation-single-list .cremation-list li {
+    margin-bottom: 15px;
+  }
+  .cremation-single-lists .cremation-single-list.cremation-single-lists-left {
+    padding-right: 0;
+    padding-bottom: 40px;
+    border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
+  }
+  .cremation-single-lists .cremation-single-list.cremation-single-lists-right {
+    padding-left: 0;
+    padding-top: 32px;
+    border-left: none;
+  }
 }
 @media (max-width: 475px) {
   .hero .mob-banner {
@@ -2640,6 +2696,9 @@ b {
     z-index: 2;
     width: 72%;
   }
+  .title-page {
+    font-size: 40px;
+  }
   .title-section .line-2 {
     bottom: 8px;
     top: unset;
@@ -2649,5 +2708,9 @@ b {
   }
   .algorithm-section .title-section br {
     display: block;
+  }
+  .cremation-hero .title-section .line-2 {
+    bottom: unset;
+    top: 50%;
   }
 }
