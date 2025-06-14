@@ -20,25 +20,15 @@ $title = get_sub_field('title');
             <div class="marquee">
                 <?php for ($i = 0; $i < 3; $i++) : ?>
                     <div class="marquee-content">
-                        <?php while (have_rows('partner_logos')) : the_row(); ?>
-                            <?php
+                        <?php while (have_rows('partner_logos')) : the_row();
+
                             $logo = get_sub_field('logo');
-                            $partner_name = get_sub_field('partner_name');
-                            $partner_link = get_sub_field('partner_link');
-                            ?>
-                            <?php if ($partner_link) : ?>
-                                <a href="<?php echo esc_url($partner_link['url']); ?>"
-                                <?php echo $partner_link['target'] ? 'target="' . esc_attr($partner_link['target']) . '"' : ''; ?>>
-                            <?php endif; ?>
 
-                            <?php if ($logo) : ?>
+                            if ($logo) : ?>
                                 <img src="<?php echo esc_url($logo['url']); ?>"
-                                     alt="<?php echo $partner_name ? esc_attr($partner_name) : esc_attr($logo['alt']); ?>">
+                                     alt="<?php echo esc_attr($logo['alt']); ?>">
                             <?php endif; ?>
 
-                            <?php if ($partner_link) : ?>
-                                </a>
-                            <?php endif; ?>
                         <?php endwhile; ?>
                     </div>
                     <?php reset_rows(); ?>
