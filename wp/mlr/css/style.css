@@ -1130,7 +1130,7 @@ b {
 }
 .footer .footer-content .footer-contacts .footer-contacts-item .socials {
   margin-right: 20px;
-  width: 70px;
+  width: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1869,8 +1869,6 @@ b {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 .mobile-menu .mobile-contacts .mobile-contacts-item .socials a, .mobile-menu .mobile-contacts  a.main-soc {
   margin-bottom: 0;

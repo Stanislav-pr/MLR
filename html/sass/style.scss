@@ -988,7 +988,7 @@ b{
         display: flex;
         .socials{
           margin-right: 20px;
-          width: 70px;
+          width: 90px;
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
@@ -1622,12 +1622,13 @@ b{
       display: flex;
       .socials{
         margin-right: 20px;
-        width: 70px;
+        width: 90px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         a {
-          margin-bottom: 5px;
+          margin-bottom: 0;
+          margin-right: 5px;
           img {
             width: 20px;
             transition: filter 0.3s ease;
