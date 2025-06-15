@@ -94,4 +94,89 @@ jQuery(document).ready(function ($) {
     });
 
 
+    // map
+
+
 });
+
+function initMap() {
+    let stylers = [
+        {
+            featureType: "all",
+            elementType: "all",
+            stylers: [
+                { saturation: -100 },
+                { lightness: 20 }
+            ]
+        },
+        {
+            featureType: "administrative",
+            elementType: "labels.text.fill",
+            stylers: [{ color: "#444444" }]
+        },
+        {
+            featureType: "administrative.country",
+            elementType: "geometry.stroke",
+            stylers: [{ visibility: "on" }]
+        },
+        {
+            featureType: "landscape",
+            elementType: "all",
+            stylers: [{ color: "#f2f2f2" }]
+        },
+        {
+            featureType: "poi",
+            elementType: "all",
+            stylers: [{ visibility: "simplified" }]
+        },
+        {
+            featureType: "poi.attraction",
+            elementType: "labels.icon",
+            stylers: [{ visibility: "on" }]
+        },
+        {
+            featureType: "road",
+            elementType: "all",
+            stylers: [
+                { saturation: -100 },
+                { lightness: 45 }
+            ]
+        },
+        {
+            featureType: "road.highway",
+            elementType: "all",
+            stylers: [{ visibility: "simplified" }]
+        },
+        {
+            featureType: "road.arterial",
+            elementType: "labels.icon",
+            stylers: [{ visibility: "off" }]
+        },
+        {
+            featureType: "transit",
+            elementType: "all",
+            stylers: [{ visibility: "off" }]
+        },
+        {
+            featureType: "water",
+            elementType: "all",
+            stylers: [
+                { color: "#dcdcdc" },
+                { visibility: "on" }
+            ]
+        }
+    ];
+
+    if (document.getElementById("map")) {
+        let map,
+            mapContainer = document.getElementById("map"),
+            mapLat = parseFloat(mapContainer.getAttribute("data-lat")),
+            mapLng = parseFloat(mapContainer.getAttribute("data-lng"));
+
+        map = new google.maps.Map(mapContainer, {
+            center: { lat: mapLat, lng: mapLng },
+            zoom: 11,
+            styles: stylers,
+        });
+    }
+}

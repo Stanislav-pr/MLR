@@ -12,14 +12,15 @@ function add_styles() {
 }
 
 function add_scripts() {
-    $key_map = get_field('google_map_api_key', 'options');
+    $key_map = get_field('google_map_api_key', 'option');
 
     wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array('jquery'), false, true);
+
     wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.js', array('jquery'), false, true);
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery'), false, true);
 
     if($key_map){
-        wp_enqueue_script( 'map', 'https://maps.googleapis.com/maps/api/js?key='.$key_map.'&callback=initMap', array('jquery'), false,['in_footer' => true, 'strategy'  => 'defer',]);
+        wp_enqueue_script( 'map', 'https://maps.googleapis.com/maps/api/js?key='.$key_map.'&callback=initMap', array('jquery'), false,['in_footer' => true, 'async'  => true,]);
     }
 
 }

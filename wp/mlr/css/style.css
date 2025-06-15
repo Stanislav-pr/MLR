@@ -1279,6 +1279,7 @@ b {
 #map {
   width: 100%;
   margin-top: 47px;
+  height: 485px;
 }
 
 .swiper-pagination {
@@ -1897,7 +1898,9 @@ b {
 .costs-note-mobile {
   display: none;
 }
-
+.facebook-contact img {
+  width: 30px;
+}
 @media (max-width: 1180px) {
   .container {
     padding: 0 15px;
@@ -2736,6 +2739,9 @@ b {
   }
   .urn .page-hero .cremation-hero-content .cremation-hero-text .cremation-text {
     padding: 0 0 6px;
+  }
+  .facebook-contact img {
+    width: 45px;
   }
 }
 @media (max-width: 475px) {
