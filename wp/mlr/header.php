@@ -113,7 +113,7 @@ $main_social = get_field('main_social', 'option');
                         $link_target = $link['target'] ? $link['target'] : '_self';
                         ?>
                         <a href="<?= esc_url($link_url); ?>" target="<?= esc_attr($link_target); ?>"><?= esc_html($link_title); ?></a>
-                    <?php endif; ?>?>
+                    <?php endif; ?>
                 <?php endforeach;
             endif; ?>
             <div class="mobile-contacts-item">
@@ -137,7 +137,11 @@ $main_social = get_field('main_social', 'option');
                 <a href="mailto:<?= $email;?>"><?= $email;?></a>
             <?php endif; ?>
             <?php if($main_social):?>
-                <a href="<?= $main_social['link'];?>" target="_blank"><img src="<?= $main_social['icon']['url'];?>" alt="<?= $main_social['icon']['url'];?>"></a>
+                <?php foreach($main_social as $soc):?>
+                    <a href="<?= $soc['link'];?>" target="_blank" class="main-soc"><img src="<?= $soc['icon']['url'];
+                    ?>" alt="<?=
+                        $soc['icon']['url'];?>"></a>
+                <?php endforeach; ?>
             <?php endif; ?>
         </div>
         <p class="mobile-copyright"><?= $mobile_copyright?$mobile_copyright:__('Mykhailo Lymar Repatriation', 'mlr');?> © <?= date('Y'); ?></p>

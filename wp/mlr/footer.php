@@ -1,7 +1,15 @@
 <?php
 
-$socs = get_field('social_networks', 'options');
+$logo = get_field('footer_logo', 'option');
+$footer_text = get_field('footer_text', 'option');
+$contact_phones = get_field('contact_phones', 'option');
+$social_networks = get_field('social_networks','option');
+$main_phone = get_field('main_phone', 'option');
+$email = get_field('email', 'option');
+$main_social = get_field('main_social', 'option');
 $copyright = get_field('copyright', 'options');
+$title_contacts = get_field('title_contacts', 'option');
+$title_menu = get_field('title_menu', 'option');
 
 ?>
 
@@ -11,47 +19,82 @@ $copyright = get_field('copyright', 'options');
     <div class="container">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="img/logo.svg" alt="">
+                <a href="<?= get_home_url(); ?>">
+                    <img src="<?= $logo['url']; ?>" alt="<?= $logo['url']; ?>">
+                </a>
             </div>
-            <div class="footer-info">
-                <p><b>Mykhailo Lymar Repatriation</b></p>
-                <p>Międzynarodowy Transport Zmarłych - International transport of the deceased</p>
-                <p><b>NIP</b> 5273085707<br>
-                    <b>REGON</b> 526987766</p>
-            </div>
+            <?php if($footer_text):?>
+                <div class="footer-info">
+                    <?= $footer_text;?>
+                </div>
+            <?php endif; ?>
             <div class="footer-menu">
-                <h3>послуги</h3>
-                <ul>
-                    <li><a href="#">Кремація</a></li>
-                    <li><a href="#">Перевезення померлих</a></li>
-                    <li><a href="#">Перевезення урн</a></li>
-                    <li><a href="#">Партнерам</a></li>
-                    <li><a href="#">Товари</a></li>
-                </ul>
+                <?php if($title_menu):?>
+                    <h3><?= $title_menu;?></h3>
+                <?php endif; ?>
+                <?php wp_nav_menu([
+                    'theme_location' => 'footer-menu',
+                    'container' => false,
+                    'menu_class' => '',
+                ]);?>
             </div>
             <div class="footer-contacts">
-                <h3>контакти</h3>
-                <a href="tel:48883513035">+48 883 513 035 - ua / ru</a>
-                <a href="tel:48572272697">+48 572 272 697 - pl / en / ua / ru</a>
+                <?php if($title_contacts):?>
+                    <h3><?= $title_contacts;?></h3>
+                <?php endif; ?>
+                <?php if($contact_phones):
+                    foreach ($contact_phones as $phone):
+                        $link = $phone['phone'];
+                        if( $link ):
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self';
+                            ?>
+                            <a href="<?= esc_url($link_url); ?>" target="<?= esc_attr($link_target); ?>"><?= esc_html($link_title); ?></a>
+                        <?php endif; ?>
+                    <?php endforeach;
+                endif; ?>
                 <div class="footer-contacts-item">
                     <div class="socials">
-                        <a href="#" target="_blank"><img src="img/whatsapp.svg" alt=""></a>
-                        <a href="#" target="_blank"><img src="img/viber.svg" alt=""></a>
-                        <a href="#" target="_blank"><img src="img/telegram.svg" alt=""></a>
-                        <a href="#" target="_blank" class="facebook-desctop"><img src="img/facebook.svg" alt=""></a>
+                        <?php if($social_networks):?>
+                            <div class="socials">
+                                <?php foreach ($social_networks as $social):
+                                    $icon = $social['icon'];
+                                    $link = $social['link'];
+
+                                    if( $link ):?>
+                                        <a href="<?= $link;?>" target="_blank"><img src="<?= $icon['url'];?>" alt="<?= $icon['url'];?>"></a>
+                                    <?php endif; ?>
+                                <?php endforeach;?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if($main_social):?>
+                            <?php foreach($main_social as $soc):?>
+                                <a href="<?= $soc['link'];?>" target="_blank" class="facebook-desctop"><img src="<?= $soc['icon']['url'];?>" alt="<?= $soc['icon']['url'];?>"></a>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
-                    <a href="tel:380675741293 ">+38 067 574 12 93 </a>
+                    <?php if($main_phone):?>
+                        <a href="tel:<?= phone_clear($main_phone);?>"><?= $main_phone;?></a>
+                    <?php endif; ?>
                 </div>
-                <a href="mailto:biuro@mlrepatriation.com">biuro@mlrepatriation.com</a>
-                <a href="#" target="_blank" class="facebook-mobile"><img src="img/facebook.svg" alt=""></a>
+                <?php if($email):?>
+                    <a href="mailto:<?= $email;?>"><?= $email;?></a>
+                <?php endif; ?>
+                <?php if($main_social):
+                    foreach ($main_social as $soc):?>
+                        <a href="<?= $soc['link'];?>" class="facebook-mobile" target="_blank"><img src="<?= $soc['icon']['url'];?>" alt="<?= $soc['icon']['url'];?>"></a>
+                    <?php endforeach;?>
+                <?php endif; ?>
             </div>
         </div>
         <div class="footer-bottom">
-            <p class="copyright">Mykhailo Lymar Repatriation © 2025</p>
-            <ul class="footer-bootom-menu">
-                <li><a href="#">Політика конфіденційності</a></li>
-                <li><a href="#">Умови використання</a></li>
-            </ul>
+            <p class="copyright"><?= $copyright?$copyright:__('Mykhailo Lymar Repatriation', 'mlr');?> © <?= date('Y'); ?></p>
+            <?php wp_nav_menu([
+                'theme_location' => 'footer-bottom-menu',
+                'container' => false,
+                'menu_class' => 'footer-bootom-menu',
+            ]);?>
         </div>
     </div>
 </footer>

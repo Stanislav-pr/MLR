@@ -13,6 +13,7 @@ function theme_register_nav_menu(){
         'main-menu' => 'Header',
         'mobile-menu' => 'Mobile',
         'footer-menu'  => 'Footer',
+        'footer-bottom-menu' => 'Footer Bottom'
        )
     );
 	add_theme_support( 'post-thumbnails'); 
