@@ -1,21 +1,22 @@
 <?php
 
-
+$title = get_sub_field('title');
+$intro_text = get_sub_field('intro_text');
 
 ?>
 
 <section class="algorithm-section">
     <div class="container">
-        <?php if ($title = get_sub_field('title')) : ?>
+        <?php if ($title) : ?>
             <h2 class="title-section">
                 <span class="line line-1"></span>
-                <span class="line-text"><?php echo wp_kses_post($title); ?></span>
+                <span class="line-text"><?= $title; ?></span>
                 <span class="line line-2"></span>
             </h2>
         <?php endif; ?>
 
         <div class="algorithm-wrap">
-            <?php if ($intro_text = get_sub_field('intro_text')) : ?>
+            <?php if ($intro_text) : ?>
                 <div class="algorithm-info">
                     <?php echo wp_kses_post($intro_text); ?>
                 </div>
@@ -42,7 +43,7 @@
                                 <?php endif; ?>
 
                                 <?php if ($step_content) : ?>
-                                    <?php echo wp_kses_post($step_content); ?>
+                                    <p class="list-title"><?php echo wp_kses_post($step_content); ?></p>
                                 <?php endif; ?>
 
                                 <?php if (have_rows('step_list')) : ?>

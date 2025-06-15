@@ -13,5 +13,8 @@ $title = get_sub_field('title');
                 <span class="line line-2"></span>
             </h2>
         <?php endif; ?>
+        <div class="reviews">
+            <?= do_shortcode('[wprevpro_usetemplate tid="1"]'); ?>
+        </div>
     </div>
 </section>

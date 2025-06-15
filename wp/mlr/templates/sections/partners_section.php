@@ -31,7 +31,6 @@ $title = get_sub_field('title');
 
                         <?php endwhile; ?>
                     </div>
-                    <?php reset_rows(); ?>
                 <?php endfor; ?>
             </div>
         </div>
