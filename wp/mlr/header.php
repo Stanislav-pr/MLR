@@ -17,6 +17,15 @@
 <?php
 
 $logo = get_field('logo', 'option');
+$phones_title = get_field('phones_title', 'option');
+$phones_header = get_field('phones_header', 'option');
+$button = get_field('button', 'option');
+$contact_phones = get_field('contact_phones', 'option');
+$social_networks = get_field('social_networks', 'option');
+$mobile_copyright = get_field('mobile_copyright', 'option');
+$main_phone = get_field('main_phone', 'option');
+$email = get_field('email', 'option');
+$main_social = get_field('main_social', 'option');
 
 ?>
 <body <?php body_class() ?>>
@@ -30,69 +39,31 @@ $logo = get_field('logo', 'option');
                 </div>
                 <div class="header-navigation">
                     <div class="header-info">
-                        <div class="header-phones">Цілодобово: <a href="#">+38 067 574 12 93</a> <a href="#">+48 883 513 035</a></div>
-                        <a href="#" class="cta-button">звʼязатись</a>
+                        <div class="header-phones"><?= $phones_title;?>
+                            <?php if ($phones_header):
+                                foreach ($phones_header as $phone): ?>
+
+                                    <a href="tel:<?= phone_clear($phone['phone']); ?>"><?= $phone['phone']; ?></a>
+
+                                <?php endforeach;
+                            endif; ?>
+                        </div>
+                        <?php if( $button ):
+                            $button_url = $button['url'];
+                            $button_title = $button['title'];
+                            $button_target = $button['target'] ? $button['target'] : '_self';
+                            ?>
+                            <a class="cta-button" href="<?= esc_url($button_url); ?>" target="<?= esc_attr($button_target); ?>"><?= esc_html($button_title); ?></a>
+                        <?php endif; ?>
                         <div class="languages">
                             <a href="#">UA</a>
                         </div>
                     </div>
-                    <ul class="nav">
-                        <li class="menu-item-has-children">
-                            <a href="#">Кремація</a>
-                            <ul class="sub-menu">
-                                <li><a href="#"><img src="img/flag/ukraine.png" alt="">Україна</a></li>
-                                <li><a href=""><img src="img/flag/germany.png" alt="">Німеччина</a></li>
-                                <li><a href="#"><img src="img/flag/poland.png" alt="">Польща</a></li>
-                                <li><a href=""><img src="img/flag/czech.png" alt="">Чехія</a></li>
-                                <li><a href=""><img src="img/flag/moldova.png" alt="">Молдова</a></li>
-                                <li><a href=""><img src="img/flag/latvia.png" alt="">Латвія</a></li>
-                                <li><a href=""><img src="img/flag/lithuania.png" alt="">Литва</a></li>
-                                <li><a href=""><img src="img/flag/estonia.png" alt="">Естонія</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">перевезення померлих</a>
-                            <ul class="sub-menu">
-                                <li><a href="#"><img src="img/flag/poland.png" alt="">Польща</a></li>
-                                <li><a href=""><img src="img/flag/germany.png" alt="">Німеччина</a></li>
-                                <li><a href=""><img src="img/flag/czech.png" alt="">Чехія</a></li>
-                                <li><a href=""><img src="img/flag/estonia.png" alt="">Естонія</a></li>
-                                <li><a href=""><img src="img/flag/latvia.png" alt="">Латвія</a></li>
-                                <li><a href=""><img src="img/flag/lithuania.png" alt="">Литва</a></li>
-                                <li><a href="#"><img src="img/flag/france.png" alt="">Франція</a></li>
-                                <li><a href=""><img src="img/flag/moldova.png" alt="">Молдова</a></li>
-                                <li><a href=""><img src="img/flag/romania.png" alt="">Румунія</a></li>
-                                <li><a href=""><img src="img/flag/austria.png" alt="">Австрія</a></li>
-                                <li><a href=""><img src="img/flag/belarus.png" alt="">Білорусь</a></li>
-                                <li><a href=""><img src="img/flag/belgium.png" alt="">Бельгія</a></li>
-                                <li><a href="#"><img src="img/flag/uk.png" alt="">Велика Британія</a></li>
-                                <li><a href=""><img src="img/flag/bulgaria.png" alt="">Болгарія</a></li>
-                                <li><a href=""><img src="img/flag/hungary.png" alt="">Угорщина</a></li>
-                                <li><a href=""><img src="img/flag/denmark.png" alt="">Данія</a></li>
-                                <li><a href=""><img src="img/flag/spain.png" alt="">Іспанія</a></li>
-                                <li><a href=""><img src="img/flag/italy.png" alt="">Італія</a></li>
-                                <li><a href="#"><img src="img/flag/netherlands.png" alt="">Нідерланди</a></li>
-                                <li><a href=""><img src="img/flag/norway.png" alt="">Норвегія</a></li>
-                                <li><a href=""><img src="img/flag/portugal.png" alt="">Португалія</a></li>
-                                <li><a href=""><img src="img/flag/russia.png" alt="">Росія</a></li>
-                                <li><a href=""><img src="img/flag/slovakia.png" alt="">Словаччина</a></li>
-                                <li><a href=""><img src="img/flag/finland.png" alt="">Фінляндія</a></li>
-                                <li><a href=""><img src="img/flag/sweden.png" alt="">Швеція</a></li>
-                                <li><a href=""><img src="img/flag/earth.png" alt="">Інші країни</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">перевезення урн</a></li>
-                        <li><a href="#">Контакти</a></li>
-                        <li class="menu-item-has-children non-flag">
-                            <a href="#">Партнерам</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Перевезення померлих</a></li>
-                                <li><a href="">Викуп катафалків</a></li>
-                                <li><a href="#">Ритуальні товари</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
+                    <?php wp_nav_menu([
+                        'theme_location' => 'main-menu',
+                        'container' => false,
+                        'menu_class' => 'nav',
+                    ]);?>
                 </div>
                 <div class="nav-mob">
                     <div class="languages">
@@ -110,33 +81,65 @@ $logo = get_field('logo', 'option');
         </div>
     </header>
     <div class="mobile-menu">
-        <ul>
-            <li><a href="">кремація</a></li>
-            <li><a href="">перевезення померлих</a></li>
-            <li><a href="">перевезення урн</a></li>
-            <li><a href="">контакти</a></li>
-            <li><a href="">партнерам</a></li>
-        </ul>
+        <?php wp_nav_menu([
+            'theme_location' => 'mobile-menu',
+            'container' => false,
+            'menu_class' => '',
+        ]);?>
         <div class="mobile-phones">
-            Цілодобово:
-            <a href="#">+38 067 574 12 93</a>
-            <a href="#">+48 883 513 035</a>
+            <?= $phones_title;?>
+            <?php if ($phones_header):
+                foreach ($phones_header as $phone): ?>
+
+                    <a href="tel:<?= phone_clear($phone['phone']); ?>"><?= $phone['phone']; ?></a>
+
+                <?php endforeach;
+            endif; ?>
         </div>
-        <a href="#" class="btn-default">звʼязатись</a>
+        <?php if( $button ):
+            $button_url = $button['url'];
+            $button_title = $button['title'];
+            $button_target = $button['target'] ? $button['target'] : '_self';
+            ?>
+            <a class="btn-default" href="<?= esc_url($button_url); ?>" target="<?= esc_attr($button_target); ?>"><?= esc_html($button_title); ?></a>
+        <?php endif; ?>
         <div class="mobile-contacts">
-            <a href="tel:48883513035">+48 883 513 035 - ua / ru</a>
-            <a href="tel:48572272697">+48 572 272 697 - pl / en / ua / ru</a>
+            <?php if($contact_phones):
+                foreach ($contact_phones as $phone):
+                    $link = $phone['phone'];
+                    if( $link ):
+                        $link_url = $link['url'];
+                        $link_title = $link['title'];
+                        $link_target = $link['target'] ? $link['target'] : '_self';
+                        ?>
+                        <a href="<?= esc_url($link_url); ?>" target="<?= esc_attr($link_target); ?>"><?= esc_html($link_title); ?></a>
+                    <?php endif; ?>?>
+                <?php endforeach;
+            endif; ?>
             <div class="mobile-contacts-item">
-                <div class="socials">
-                    <a href="#" target="_blank"><img src="img/whatsapp.svg" alt=""></a>
-                    <a href="#" target="_blank"><img src="img/viber.svg" alt=""></a>
-                    <a href="#" target="_blank"><img src="img/telegram.svg" alt=""></a>
-                </div>
-                <a href="tel:380675741293 ">+38 067 574 12 93 </a>
+                <?php if($social_networks):?>
+                    <div class="socials">
+                        <?php foreach ($social_networks as $social):
+                            $icon = $social['icon'];
+                            $link = $social['link'];
+
+                            if( $link ):?>
+                                <a href="<?= $link;?>" target="_blank"><img src="<?= $icon['url'];?>" alt="<?= $icon['url'];?>"></a>
+                            <?php endif; ?>
+                        <?php endforeach;?>
+                    </div>
+                <?php endif; ?>
+                <?php if($main_phone):?>
+                    <a href="tel:<?= phone_clear($main_phone);?>"><?= $main_phone;?></a>
+                <?php endif; ?>
             </div>
-            <a href="mailto:biuro@mlrepatriation.com">biuro@mlrepatriation.com</a>
-            <a href="#" target="_blank"><img src="img/facebook.svg" alt=""></a>
+            <?php if($email):?>
+                <a href="mailto:<?= $email;?>"><?= $email;?></a>
+            <?php endif; ?>
+            <?php if($main_social):?>
+                <a href="<?= $main_social['link'];?>" target="_blank"><img src="<?= $main_social['icon']['url'];?>" alt="<?= $main_social['icon']['url'];?>"></a>
+            <?php endif; ?>
         </div>
-        <p class="mobile-copyright">Mykhailo Lymar Repatriation © 2025</p>
+        <p class="mobile-copyright"><?= $mobile_copyright?$mobile_copyright:__('Mykhailo Lymar Repatriation', 'mlr');?> © <?= date('Y'); ?></p>
     </div>
     <main class="main">
