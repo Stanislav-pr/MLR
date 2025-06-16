@@ -4,8 +4,8 @@ $title = get_sub_field('title');
 $intro_text = get_sub_field('intro_text');
 $button = get_sub_field('button');
 $rows = get_sub_field('variable_rows');
-$cta_title = get_sub_field('cta_title');
-$form_shortcode = get_sub_field('cta_form_shortcode');
+$form_title = get_sub_field('form_title');
+$form_id = get_sub_field('form_id');
 
 ?>
 
@@ -48,17 +48,17 @@ $form_shortcode = get_sub_field('cta_form_shortcode');
                         </div>
                     <?php endif; ?>
 
-                    <?php if ($cta_title || $form_shortcode): ?>
-                        <div class="form-wrap">
-                            <?php if ($cta_title): ?>
-                                <h2><?= esc_html($cta_title); ?></h2>
-                            <?php endif; ?>
+        <?php if ($form_id): ?>
+            <div class="form-wrap">
+                <?php if ($form_title): ?>
+                    <h2><?= esc_html($form_title); ?></h2>
+                <?php endif; ?>
 
-                            <?php if ($form_shortcode): ?>
-                                <?= do_shortcode($form_shortcode); ?>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
-                </div>
-            </section>
+                <?php if ($form_id): ?>
+                    <?= do_shortcode('[contact-form-7 id="'.$form_id.'"]'); ?>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+    </div>
+</section>
 
