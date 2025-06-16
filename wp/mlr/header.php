@@ -138,7 +138,7 @@ $main_social = get_field('main_social', 'option');
             <?php endif; ?>
             <?php if($main_social):?>
                 <?php foreach($main_social as $soc):?>
-                    <a href="<?= $soc['link'];?>" target="_blank" class="main-soc"><img src="<?= $soc['icon']['url'];
+                    <a href="<?= $soc['link'];?>" target="_blank" class="mobile-social"><img src="<?= $soc['icon']['url'];
                     ?>" alt="<?=
                         $soc['icon']['url'];?>"></a>
                 <?php endforeach; ?>
