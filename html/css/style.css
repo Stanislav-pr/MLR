@@ -744,7 +744,7 @@ b {
   font-weight: 400;
   margin-bottom: 8px;
   padding-bottom: 8px;
-  border-bottom: 0.3px solid rgba(67, 67, 65, 0.5);
+  border-bottom: 0.5px solid rgba(67, 67, 65, 0.5);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -2469,6 +2469,9 @@ b {
   .choice-section .choice-wrap .card-choice:last-child {
     margin-bottom: 0;
   }
+  .choice-section .choice-wrap .card-choice .card-choice-title {
+    width: 100%;
+  }
   .collab-section {
     padding: 40px 0 32px;
   }
@@ -2791,6 +2794,9 @@ b {
   .lists-section .lists-note {
     padding: 24px 0;
   }
+  .moved .moved-section {
+    padding: 16px 0;
+  }
   .moved .choice-section {
     padding: 32px 0 56px;
   }
@@ -2851,5 +2857,9 @@ b {
   .cremation-hero .title-section .line-2 {
     bottom: unset;
     top: 50%;
+  }
+  .title-two-row .line.line-2 {
+    top: unset;
+    bottom: 18px;
   }
 }

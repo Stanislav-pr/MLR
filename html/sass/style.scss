@@ -648,7 +648,7 @@ b{
       font-weight: 400;
       margin-bottom: 8px;
       padding-bottom: 8px;
-      border-bottom: 0.3px solid rgba(67, 67, 65, 0.5);
+      border-bottom: $border;
       width: fit-content;
     }
     p {
@@ -2274,6 +2274,9 @@ b{
         &:last-child{
           margin-bottom: 0;
         }
+        .card-choice-title{
+          width: 100%;
+        }
       }
     }
   }
@@ -2611,6 +2614,9 @@ b{
     }
   }
   .moved{
+    .moved-section {
+      padding: 16px 0;
+    }
     .choice-section{
       padding: 32px 0 56px;
     }
@@ -2702,6 +2708,14 @@ b{
     .title-section .line-2 {
       bottom: unset;
       top: 50%;
+    }
+  }
+  .title-two-row {
+    .line{
+      &.line-2 {
+        top: unset;
+        bottom: 18px;
+      }
     }
   }
 }
