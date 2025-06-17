@@ -2,3 +2,122 @@
 Theme Name: mlr
 Description: Theme WP for MLR
 */
+
+
+/* Theme WP/mlr/style.css */
+
+.form-wrap form{
+    width: 570px;
+    margin: 16px auto 0;
+    background-color: #E9DACE;
+}
+.form-wrap input{
+    width: 100%;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 18px;
+    color: #434341;
+    font-weight: 700;
+    padding: 17px;
+    border: 0.5px solid rgba(67, 67, 65, 0.5);
+    border-radius: 50px;
+    background-color: #E9DACE;
+}
+.form-wrap textarea{
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #434341;
+    font-weight: 700;
+    border: 0.5px solid rgba(67, 67, 65, 0.5);
+    border-radius: 20px;
+    background-color: #E9DACE;
+    padding: 17px;
+}
+::placeholder {
+    color: #434341;
+    font-weight: 300;
+    font-size: 18px;
+    opacity: 0.5;
+    text-align: center;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #434341;
+    font-weight: 300;
+    font-size: 18px;
+    opacity: 0.5;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: #434341;
+    font-weight: 300;
+    font-size: 18px;
+    opacity: 0.5;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #434341;
+    font-weight: 300;
+    font-size: 18px;
+    opacity: 0.5;
+}
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    color: #434341;
+    font-weight: 300;
+    font-size: 18px;
+    opacity: 0.5;
+}
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: inherit;
+}
+.wpcf7-not-valid-tip {
+    padding-left: 55px;
+    color: #ed0131;
+    font-size: 12px;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 12px;
+}
+.form-wrap input.wpcf7-not-valid{
+    border:0.5px solid #ed0131;
+}
+.wpcf7-response-output{
+    display: none !important;
+}
+.form-wrap .wpcf7-spinner {
+    margin: 18px 0 0 10px;
+    position: absolute;
+}
+.form-wrap input.wpcf7-submit{
+    background-color: #434341;
+    color: #E9DACE;
+    font-weight: 800;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+.form-wrap input.wpcf7-submit:hover{
+    cursor: pointer;
+    background-color: #252525;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+@media (max-width: 580px) {
+    .form-wrap form {
+        width: 100%;
+    }
+    .form-wrap input {
+        text-align: left;
+        padding: 17px 32px;
+    }
+    .form-wrap textarea {
+        padding: 17px 32px;
+    }
+    ::placeholder {
+        text-align: left;
+    }
+}
