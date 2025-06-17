@@ -18,42 +18,56 @@ jQuery(document).ready(function ($) {
 
     //slider
 
-    let swiper = new Swiper(".swiper-product", {
-        slidesPerView: 4,
-        spaceBetween: 0,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            0: {
-                slidesPerView: 1.5,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
+    document.querySelectorAll('.swiper-product').forEach((slider, index) => {
+        const pagination = slider.querySelector('.swiper-pagination');
+        const nextBtn = slider.querySelector('.swiper-button-next');
+        const prevBtn = slider.querySelector('.swiper-button-prev');
+
+        new Swiper(slider, {
+            slidesPerView: 4,
+            spaceBetween: 0,
+            pagination: {
+                el: pagination,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: nextBtn,
+                prevEl: prevBtn,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.5,
+                    pagination: {
+                        el: pagination,
+                        clickable: true,
+                    },
                 },
-            },
-            475: {
-                slidesPerView: 2,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
+                475: {
+                    slidesPerView: 2,
+                    pagination: {
+                        el: pagination,
+                        clickable: true,
+                    },
                 },
-            },
-            568: {
-                slidesPerView: 2.5,
-                pagination: false,
-            },
-            768: {
-                slidesPerView: 3,
-                pagination: false,
-            },
-            992: {
-                slidesPerView: 4,
-                pagination: false,
+                568: {
+                    slidesPerView: 2.5,
+                    pagination: false,
+                    navigation: false,
+                },
+                768: {
+                    slidesPerView: 3,
+                    pagination: false,
+                    navigation: false,
+                },
+                992: {
+                    slidesPerView: 4,
+                    pagination: false,
+                    navigation: false,
+                }
             }
-        }
+        });
     });
+
 
 
     // title line
