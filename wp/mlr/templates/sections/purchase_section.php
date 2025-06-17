@@ -3,7 +3,7 @@
 $title = get_sub_field('title');
 $intro_text = get_sub_field('intro_text');
 $button = get_sub_field('button');
-$rows = get_sub_field('variable_rows');
+$paragraphs = get_sub_field('variables');
 $form_title = get_sub_field('form_title');
 $form_id = get_sub_field('form_id');
 
@@ -29,24 +29,44 @@ $form_id = get_sub_field('form_id');
             </div>
         <?php endif; ?>
 
-                    <?php if (!empty($rows)): ?>
-                        <div class="variables-wrap">
-                            <?php foreach ($rows as $row): ?>
-                                <div class="variable-row">
-                                    <div class="variable-column variable-left">
-                                        <div class="variable-item">
-                                            <?= wp_kses_post($row['left_column']); ?>
-                                        </div>
-                                    </div>
-                                    <div class="variable-column variable-right">
-                                        <div class="variable-item">
-                                            <?= wp_kses_post($row['right_column']); ?>
-                                        </div>
-                                    </div>
+        <?php if (have_rows('variables')): ?>
+            <div class="variables-wrap">
+                <?php
+                $buffer = [];
+                while (have_rows('variables')): the_row();
+                    $buffer[] = get_sub_field('items');
+                    if (count($buffer) === 2) {
+                        ?>
+                        <div class="variable-row">
+                            <div class="variable-column variable-left">
+                                <div class="variable-item">
+                                    <p><?= esc_html($buffer[0]); ?></p>
                                 </div>
-                            <?php endforeach; ?>
+                            </div>
+                            <div class="variable-column variable-right">
+                                <div class="variable-item">
+                                    <p><?= esc_html($buffer[1]); ?></p>
+                                </div>
+                            </div>
                         </div>
-                    <?php endif; ?>
+                        <?php
+                        $buffer = [];
+                    }
+                endwhile;
+
+                if (count($buffer) === 1):
+                    ?>
+                    <div class="variable-row">
+                        <div class="variable-column variable-left">
+                            <div class="variable-item">
+                                <p><?= esc_html($buffer[0]); ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+
 
         <?php if ($form_id): ?>
             <div class="form-wrap">
