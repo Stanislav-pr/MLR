@@ -19,13 +19,21 @@ jQuery(document).ready(function ($) {
     //slider
 
     document.querySelectorAll('.swiper-product').forEach((slider, index) => {
+        const id = slider.dataset.slider;
+        const wrapper = slider.closest('.slider-wrapper');
         const pagination = slider.querySelector('.swiper-pagination');
-        const nextBtn = slider.querySelector('.swiper-button-next');
-        const prevBtn = slider.querySelector('.swiper-button-prev');
+        const nextBtn = document.querySelector(`[data-slider-button="next-${id}"]`);
+        const prevBtn = document.querySelector(`[data-slider-button="prev-${id}"]`);
 
         new Swiper(slider, {
             slidesPerView: 4,
             spaceBetween: 0,
+            loop: true,
+            on: {
+                slideChange: updateFourthVisibleSlidePadding,
+                resize: updateFourthVisibleSlidePadding, // на всякий случай
+                init: updateFourthVisibleSlidePadding,
+            },
             pagination: {
                 el: pagination,
                 clickable: true,
@@ -52,22 +60,43 @@ jQuery(document).ready(function ($) {
                 568: {
                     slidesPerView: 2.5,
                     pagination: false,
-                    navigation: false,
                 },
                 768: {
                     slidesPerView: 3,
                     pagination: false,
-                    navigation: false,
                 },
                 992: {
                     slidesPerView: 4,
                     pagination: false,
-                    navigation: false,
                 }
             }
         });
     });
 
+    function updateFourthVisibleSlidePadding() {
+        document.querySelectorAll('.swiper-product').forEach(slider => {
+            const swiperInstance = slider.swiper;
+            if (!swiperInstance) return;
+
+            swiperInstance.slides.forEach(slide => {
+                slide.classList.remove('last-visible');
+            });
+
+            let count = swiperInstance.params.slidesPerView;
+            if (typeof count !== 'number') {
+                count = Math.floor(
+                    swiperInstance.slidesEl.offsetWidth / swiperInstance.slides[0].offsetWidth
+                );
+            }
+
+            const fourthVisibleIndex = swiperInstance.activeIndex + count - 1;
+
+            const fourthSlide = swiperInstance.slides[fourthVisibleIndex];
+            if (fourthSlide) {
+                fourthSlide.classList.add('last-visible');
+            }
+        });
+    }
 
 
     // title line

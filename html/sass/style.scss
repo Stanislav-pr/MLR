@@ -1712,8 +1712,8 @@ h1, h2, h3, h4, h5, h6{
 
 .products-section{
   padding: 0 0 60px;
+  position: relative;
   .products-wrap{
-    margin-bottom: 95px;
     .products-text{
       padding: 10px 0 20px;
       max-width: 65%;
@@ -1807,22 +1807,64 @@ h1, h2, h3, h4, h5, h6{
         }
       }
     }
-    .urn-products{
-      padding: 32px 0 0;
-      .swiper-product{
-        .swiper-wrapper{
-          .swiper-slide{
-            img{
-              border-radius: 10px;
-            }
+  }
+}
+.urn-slider{
+  &.urn-products{
+    margin: 32px 0 94px;
+    position: relative;
+    .swiper-product{
+      .swiper-slide{
+        border-right: none;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        &:after{
+          display: block;
+          width: 0.5px;
+          height: 100%;
+          background-color: $primary-color;
+          position: absolute;
+          top:0;
+        }
+        img{
+          border-radius: 10px;
+        }
+        &.swiper-slide-active{
+          .urn-product{
+            justify-content: flex-start;
+          }
+          &:after{
+            content: "";
+            right: 14px;
           }
         }
+        &.last-visible{
+          &:after{
+            content: "";
+            left: 14px;
+          }
+          .urn-product{
+            justify-content: flex-end;
+          }
+        }
+        &.swiper-slide-next{
+          padding-right: 15px;
+          &:after{
+            content: "";
+            right: 1px;
+          }
+        }
+        &.swiper-slide-next + .swiper-slide{
+          padding-left: 15px;
+        }
       }
-
     }
   }
 }
 
+.urn-product-section{
+
+}
 /* Мобильная адаптация */
 @media (max-width: 768px) {
   .product-specs {

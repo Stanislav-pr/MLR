@@ -1956,9 +1956,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .products-section {
   padding: 0 0 60px;
-}
-.products-section .products-wrap {
-  margin-bottom: 95px;
+  position: relative;
 }
 .products-section .products-wrap .products-text {
   padding: 10px 0 20px;
@@ -2082,11 +2080,54 @@ h1, h2, h3, h4, h5, h6 {
 .products-section .products-wrap .product-table .product-specs .specs-row .specs-group .specs-cell a:hover:after {
   display: none;
 }
-.products-section .products-wrap .urn-products {
-  padding: 32px 0 0;
+
+.urn-slider.urn-products {
+  margin: 32px 0 94px;
+  position: relative;
 }
-.products-section .products-wrap .urn-products .swiper-product .swiper-wrapper .swiper-slide img {
+.urn-slider.urn-products .swiper-product .swiper-slide {
+  border-right: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.urn-slider.urn-products .swiper-product .swiper-slide:after {
+  display: block;
+  width: 0.5px;
+  height: 100%;
+  background-color: #434341;
+  position: absolute;
+  top: 0;
+}
+.urn-slider.urn-products .swiper-product .swiper-slide img {
   border-radius: 10px;
+}
+.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-active .urn-product {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-active:after {
+  content: "";
+  right: 14px;
+}
+.urn-slider.urn-products .swiper-product .swiper-slide.last-visible:after {
+  content: "";
+  left: 14px;
+}
+.urn-slider.urn-products .swiper-product .swiper-slide.last-visible .urn-product {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-next {
+  padding-right: 15px;
+}
+.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-next:after {
+  content: "";
+  right: 1px;
+}
+.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-next + .swiper-slide {
+  padding-left: 15px;
 }
 
 /* Мобильная адаптация */
