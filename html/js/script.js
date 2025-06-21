@@ -31,12 +31,8 @@ jQuery(document).ready(function ($) {
             loop: true,
             on: {
                 slideChange: updateFourthVisibleSlidePadding,
-                resize: updateFourthVisibleSlidePadding, // на всякий случай
+                resize: updateFourthVisibleSlidePadding,
                 init: updateFourthVisibleSlidePadding,
-            },
-            pagination: {
-                el: pagination,
-                clickable: true,
             },
             navigation: {
                 nextEl: nextBtn,
@@ -45,6 +41,7 @@ jQuery(document).ready(function ($) {
             breakpoints: {
                 0: {
                     slidesPerView: 1.5,
+                    spaceBetween: 20,
                     pagination: {
                         el: pagination,
                         clickable: true,
@@ -52,6 +49,7 @@ jQuery(document).ready(function ($) {
                 },
                 475: {
                     slidesPerView: 2,
+                    spaceBetween: 20,
                     pagination: {
                         el: pagination,
                         clickable: true,
@@ -59,14 +57,31 @@ jQuery(document).ready(function ($) {
                 },
                 568: {
                     slidesPerView: 2.5,
-                    pagination: false,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: pagination,
+                        clickable: true,
+                    },
                 },
                 768: {
                     slidesPerView: 3,
-                    pagination: false,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: pagination,
+                        clickable: true,
+                    },
                 },
                 992: {
                     slidesPerView: 4,
+                    spaceBetween: 0,
+                    pagination: {
+                        el: pagination,
+                        clickable: true,
+                    },
+                },
+                993: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
                     pagination: false,
                 }
             }
@@ -137,5 +152,13 @@ jQuery(document).ready(function ($) {
         $(this).closest('.nav-mob').toggleClass('open');
     });
 
+    const lenis = new Lenis();
 
+// Use requestAnimationFrame to continuously update the scroll
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
 });
