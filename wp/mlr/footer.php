@@ -55,25 +55,25 @@ $title_menu = get_field('title_menu', 'option');
                     <?php endforeach;
                 endif; ?>
                 <div class="footer-contacts-item">
-                    <div class="socials">
-                        <?php if($social_networks):?>
-                            <div class="socials">
-                                <?php foreach ($social_networks as $social):
-                                    $icon = $social['icon'];
-                                    $link = $social['link'];
 
-                                    if( $link ):?>
-                                        <a href="<?= $link;?>" target="_blank"><img src="<?= $icon['url'];?>" alt="<?= $icon['url'];?>"></a>
-                                    <?php endif; ?>
-                                <?php endforeach;?>
-                            </div>
-                        <?php endif; ?>
-                        <?php if($main_social):?>
-                            <?php foreach($main_social as $soc):?>
-                                <a href="<?= $soc['link'];?>" target="_blank" class="facebook-desctop"><img src="<?= $soc['icon']['url'];?>" alt="<?= $soc['icon']['url'];?>"></a>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div>
+                    <?php if($social_networks):?>
+                        <div class="socials">
+                            <?php foreach ($social_networks as $social):
+                                $icon = $social['icon'];
+                                $link = $social['link'];
+
+                                if( $link ):?>
+                                    <a href="<?= $link;?>" target="_blank"><img src="<?= $icon['url'];?>" alt="<?= $icon['url'];?>"></a>
+                                <?php endif; ?>
+                            <?php endforeach;?>
+                            <?php if($main_social):?>
+                                <?php foreach($main_social as $soc):?>
+                                    <a href="<?= $soc['link'];?>" target="_blank" class="facebook-desctop"><img src="<?= $soc['icon']['url'];?>" alt="<?= $soc['icon']['url'];?>"></a>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+
                     <?php if($main_phone):?>
                         <a href="tel:<?= phone_clear($main_phone);?>"><?= $main_phone;?></a>
                     <?php endif; ?>
