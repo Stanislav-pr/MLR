@@ -520,7 +520,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   -webkit-box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
           box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
-  /*text-shadow: 0.4px 0 #434341, -0.4px 0 #434341, 0 0.4px #434341, 0 -0.4px #434341, 0.3px 0.3px #434341, -0.3px 0.3px #434341, 0.3px -0.3px #434341, -0.3px -0.3px #434341;*/
 }
 .header .header-wrapper .nav li.menu-item-has-children .sub-menu:before {
   content: "";
@@ -530,6 +529,14 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: -36px;
   left: 0;
+}
+.header .header-wrapper .nav li.menu-item-has-children .sub-menu li.current-menu-item a:after {
+  display: none;
+}
+.header .header-wrapper .nav li.menu-item-has-children .sub-menu li.current-menu-item a {
+  font-weight: 700;
+  -webkit-box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
+  box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
 }
 .header .header-wrapper .nav li.menu-item-has-children.non-flag .sub-menu {
   display: -ms-grid;

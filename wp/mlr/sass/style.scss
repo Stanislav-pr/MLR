@@ -406,6 +406,15 @@ h1, h2, h3, h4, h5, h6{
             li{
               margin: 0;
               min-width: 160px;
+              &.current-menu-item{
+                a{
+                  font-weight: 700;
+                  box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
+                  &:before{
+                    display: none;
+                  }
+                }
+              }
               a{
                 display: flex;
                 align-items: center;
