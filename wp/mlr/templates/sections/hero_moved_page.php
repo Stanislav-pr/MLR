@@ -6,12 +6,12 @@ $text = get_sub_field('text');
 $size = get_sub_field('size');
 ?>
 
-<section class="moved-section<?= $size?' products-text':'';?>">
+<section class="moved-section">
     <div class="container">
         <?php if ($title): ?>
             <h1><?= $title ?></h1>
         <?php endif; ?>
-        <div class="moved-info">
+        <div class="moved-info<?= $size?' products-text':'';?>">
             <?= $text;?>
             <?php if ($button): ?>
                 <a href="<?= $button['url'] ?>" class="btn-default" target="<?= $button['target'] ?>"><?= $button['title'] ?></a>
