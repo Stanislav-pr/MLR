@@ -113,7 +113,9 @@ textarea:focus {
 .algorithm-page .title-section .line-text {
     padding: 0 32px;
 }
-
+.form-section{
+    padding-bottom: 80px;
+}
 @media (max-width: 580px) {
     .form-wrap form {
         width: 100%;

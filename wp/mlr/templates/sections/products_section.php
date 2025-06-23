@@ -1,39 +1,31 @@
 <?php
 
-$default = get_sub_field('default');
-
-if ($default){
-    $title_urn = get_field('title_urn', 'options');
-    $text_urn = get_field('text_urn', 'options');
-    $gallery_urn = get_field('gallery_urn', 'options');
-}else{
-    $title_urn = get_sub_field('title');
-    $text_urn = get_sub_field('text');
-    $gallery_urn = get_sub_field('gallery');
-}
-
+$title = get_sub_field('title');
+$text = get_sub_field('text');
+$products = get_sub_field('products');
 $ind = get_row_index();
+
 
 ?>
 
-<section class="urn-section">
+<section class="urn-product-section">
     <div class="container">
-        <?php if($title_urn): ?>
-            <h2 class="title-section one-line"><span class="line-text"><?= $title_urn;?></span><span class="line line-2"></span></h2>
+        <?php if($title): ?>
+            <h2 class="title-section one-line"><span class="line-text"><?= $title;?></span><span class="line line-2"></span></h2>
         <?php endif; ?>
-        <?php if($text_urn): ?>
-            <div class="urn-content">
-                <?= $text_urn;?>
+        <?php if($text): ?>
+            <div class="urn-product-text">
+                <?= $text;?>
             </div>
         <?php endif; ?>
     </div>
-    <?php if($gallery_urn): ?>
+    <?php if($products): ?>
         <div class="urn-slider urn-products">
             <div class="swiper-button-prev" data-slider-button="prev-<?= $ind;?>"></div>
             <div class="container">
                 <div class="swiper swiper-product" data-slider="<?= $ind;?>">
                     <div class="swiper-wrapper">
-                        <?php foreach( $gallery_urn as $im ):?>
+                        <?php foreach( $products as $im ):?>
                             <div class="swiper-slide">
                                 <div class="urn-product">
                                     <a href="<?= $im['url'];?>" data-fancybox="gallery" class="fancybox">

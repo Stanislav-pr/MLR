@@ -2022,6 +2022,9 @@ h1, h2, h3, h4, h5, h6 {
   overflow-x: auto;
   margin: 20px 0 32px;
 }
+.products-section .products-wrap .product-table .product-specs-mobile {
+  display: none;
+}
 .products-section .products-wrap .product-table .product-specs .specs-row {
   display: -webkit-box;
   display: -ms-flexbox;
