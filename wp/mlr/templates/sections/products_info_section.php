@@ -1,11 +1,17 @@
 <?php
 
+$ind = get_row_index();
+
 $title = get_sub_field('title');
 $text = get_sub_field('text');
 $notes = get_sub_field('notes');
-$specifications = get_sub_field('specifications');
 $products = get_sub_field('products');
-$ind = get_row_index();
+
+$specifications = get_sub_field('specifications');
+$bl = $specifications['black_l'];
+$bxl = $specifications['black_xl'];
+$wl = $specifications['white_l'];
+$wxl = $specifications['white_xl'];
 
 ?>
 
@@ -26,10 +32,10 @@ $ind = get_row_index();
                         <div class="specs-label"></div>
                         <div class="specs-value">
                             <div class="specs-group">
-                                <div class="group-title">ЧОРНИЙ</div>
+                                <div class="group-title"><?= __('ЧОРНИЙ', 'mlr');?></div>
                             </div>
                             <div class="specs-group">
-                                <div class="group-title">БІЛИЙ</div>
+                                <div class="group-title"><?= __('БІЛИЙ', 'mlr');?></div>
                             </div>
                         </div>
                     </div>
@@ -48,57 +54,75 @@ $ind = get_row_index();
                     </div>
 
                     <div class="specs-row">
-                        <div class="specs-label">Вантажопідйомність</div>
+                        <div class="specs-label"><?= __('Вантажопідйомність', 'mlr');?></div>
                         <div class="specs-value">
                             <div class="specs-group">
-                                <div class="specs-cell">120 кг</div>
-                                <div class="specs-cell">140 кг</div>
+                                <div class="specs-cell"><?= $bl['wpd']?></div>
+                                <div class="specs-cell"><?= $bxl['wpd']?></div>
                             </div>
                             <div class="specs-group">
-                                <div class="specs-cell">140 кг</div>
-                                <div class="specs-cell">160 кг</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="specs-row">
-                        <div class="specs-label">Товщина</div>
-                        <div class="specs-value">
-                            <div class="specs-group">
-                                <div class="specs-cell">160 μm</div>
-                                <div class="specs-cell">200 μm</div>
-                            </div>
-                            <div class="specs-group">
-                                <div class="specs-cell">160 μm</div>
-                                <div class="specs-cell">200 μm</div>
+                                <div class="specs-cell"><?= $wl['wpd']?></div>
+                                <div class="specs-cell"><?= $wxl['wpd']?></div>
                             </div>
                         </div>
                     </div>
 
                     <div class="specs-row">
-                        <div class="specs-label">Розміри</div>
-                        <div class="specs-value">
-                            220 × 90 см
-                        </div>
-                    </div>
-
-                    <div class="specs-row">
-                        <div class="specs-label">Розміри Фальц</div>
-                        <div class="specs-value">
-                            10–15 см
-                        </div>
-                    </div>
-
-                    <div class="specs-row">
-                        <div class="specs-label">Технічний документ</div>
+                        <div class="specs-label"><?= __('Товщина', 'mlr');?></div>
                         <div class="specs-value">
                             <div class="specs-group">
-                                <div class="specs-cell"><a href="#">деталі</a></div>
-                                <div class="specs-cell"><a href="#">деталі</a></div>
+                                <div class="specs-cell"><?= $bl['tov']?></div>
+                                <div class="specs-cell"><?= $bxl['tov']?></div>
                             </div>
                             <div class="specs-group">
-                                <div class="specs-cell"><a href="#">деталі</a></div>
-                                <div class="specs-cell"><a href="#">деталі</a></div>
+                                <div class="specs-cell"><?= $wl['tov']?></div>
+                                <div class="specs-cell"><?= $wxl['tov']?></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="specs-row">
+                        <div class="specs-label"><?= __('Розміри', 'mlr');?></div>
+                        <div class="specs-value">
+                            <?= $bl['size']?>
+                        </div>
+                    </div>
+
+                    <div class="specs-row">
+                        <div class="specs-label"><?= __('Розміри Фальц', 'mlr');?></div>
+                        <div class="specs-value">
+                            <?= $bl['sizef']?>
+                        </div>
+                    </div>
+
+                    <div class="specs-row">
+                        <div class="specs-label"><?= __('Технічний документ', 'mlr');?></div>
+                        <div class="specs-value">
+                            <div class="specs-group">
+                                <div class="specs-cell">
+                                    <?php if ($bl['td']): ?>
+                                        <a href="<?= $bl['td']['url'] ?>" target="<?= $bl['td']['target'] ?>"><?= $bl['td']['title'] ?></a>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="specs-cell">
+                                    <?php if ($bxl['td']): ?>
+                                        <a href="<?= $bxl['td']['url'] ?>" target="<?=
+                                        $bxl['td']['target'] ?>"><?= $bxl['td']['title'] ?></a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="specs-group">
+                                <div class="specs-cell">
+                                    <?php if ($wl['td']): ?>
+                                        <a href="<?= $wl['td']['url'] ?>" target="<?= $wl['td']['target'] ?>"><?= $wl['td']['title'] ?></a>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="specs-cell">
+                                    <?php if ($wxl['td']): ?>
+                                        <a href="<?= $wxl['td']['url'] ?>" target="<?=
+                                        $wxl['td']['target'] ?>"><?= $wxl['td']['title'] ?></a>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -106,106 +130,124 @@ $ind = get_row_index();
                 <div class="product-specs-mobile">
                     <div class="specs-item">
                         <div class="specs-item-row specs-item-head">
-                            <div class="specs-item-label">ЧОРНИЙ</div>
+                            <div class="specs-item-label"><?= __('ЧОРНИЙ', 'mlr');?></div>
                             <div class="specs-item-value">L</div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Вантажопідйомність</div>
-                            <div class="specs-item-value">120 кг</div>
+                            <div class="specs-item-label"><?= __('Вантажопідйомність', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $bl['wpd']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Товщина</div>
-                            <div class="specs-item-value">160 μm</div>
+                            <div class="specs-item-label"><?= __('Товщина', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $bl['tov']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Розміри</div>
-                            <div class="specs-item-value">220 × 90 см</div>
+                            <div class="specs-item-label"><?= __('Розміри', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $bl['size']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Розміри Фальц</div>
-                            <div class="specs-item-value">10–15 см</div>
+                            <div class="specs-item-label"><?= __('Розміри Фальц', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $bl['sizef']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Технічний документ</div>
-                            <div class="specs-item-value"><a href="#">деталі</a></div>
+                            <div class="specs-item-label"><?= __('Технічний документ', 'mlr');?></div>
+                            <div class="specs-item-value">
+                                <?php if ($bl['td']): ?>
+                                    <a href="<?= $bl['td']['url'] ?>" target="<?= $bl['td']['target'] ?>"><?= $bl['td']['title'] ?></a>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                     <div class="specs-item">
                         <div class="specs-item-row specs-item-head">
-                            <div class="specs-item-label">ЧОРНИЙ</div>
+                            <div class="specs-item-label"><?= __('ЧОРНИЙ', 'mlr');?></div>
                             <div class="specs-item-value">XL</div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Вантажопідйомність</div>
-                            <div class="specs-item-value">140 кг</div>
+                            <div class="specs-item-label"><?= __('Вантажопідйомність', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $bxl['wpd']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Товщина</div>
-                            <div class="specs-item-value">200 μm</div>
+                            <div class="specs-item-label"><?= __('Товщина', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $bxl['tov']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Розміри</div>
-                            <div class="specs-item-value">220 × 90 см</div>
+                            <div class="specs-item-label"><?= __('Розміри', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $bxl['size']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Розміри Фальц</div>
-                            <div class="specs-item-value">10–15 см</div>
+                            <div class="specs-item-label"><?= __('Розміри Фальц', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $bxl['sizef']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Технічний документ</div>
-                            <div class="specs-item-value"><a href="#">деталі</a></div>
+                            <div class="specs-item-label"><?= __('Технічний документ', 'mlr');?></div>
+                            <div class="specs-item-value">
+                                <?php if ($bxl['td']): ?>
+                                    <a href="<?= $bxl['td']['url'] ?>" target="<?= $bxl['td']['target'] ?>"><?= $bxl['td']['title'] ?></a>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                     <div class="specs-item">
                         <div class="specs-item-row specs-item-head">
-                            <div class="specs-item-label">БІЛИЙ</div>
+                            <div class="specs-item-label"><?= __('БІЛИЙ', 'mlr');?></div>
                             <div class="specs-item-value">L</div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Вантажопідйомність</div>
-                            <div class="specs-item-value">140 кг</div>
+                            <div class="specs-item-label"><?= __('Вантажопідйомність', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $wl['wpd']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Товщина</div>
-                            <div class="specs-item-value">160 μm</div>
+                            <div class="specs-item-label"><?= __('Товщина', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $wl['tov']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Розміри</div>
-                            <div class="specs-item-value">220 × 90 см</div>
+                            <div class="specs-item-label"><?= __('Розміри', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $wl['size']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Розміри Фальц</div>
-                            <div class="specs-item-value">10–15 см</div>
+                            <div class="specs-item-label"><?= __('Розміри Фальц', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $wl['sizef']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Технічний документ</div>
-                            <div class="specs-item-value"><a href="#">деталі</a></div>
+                            <div class="specs-item-label"><?= __('Технічний документ', 'mlr');?></div>
+                            <div class="specs-item-value">
+                                <?php if ($wl['td']): ?>
+                                    <a href="<?= $wl['td']['url'] ?>" target="<?= $wl['td']['target'] ?>"><?=
+                                        $wl['td']['title'] ?></a>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                     <div class="specs-item">
                         <div class="specs-item-row specs-item-head">
-                            <div class="specs-item-label">БІЛИЙ</div>
+                            <div class="specs-item-label"><?= __('БІЛИЙ', 'mlr');?></div>
                             <div class="specs-item-value">XL</div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Вантажопідйомність</div>
-                            <div class="specs-item-value">160 кг</div>
+                            <div class="specs-item-label"><?= __('Вантажопідйомність', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $wxl['wpd']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Товщина</div>
-                            <div class="specs-item-value">200 μm</div>
+                            <div class="specs-item-label"><?= __('Товщина', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $wxl['tov']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Розміри</div>
-                            <div class="specs-item-value">220 × 90 см</div>
+                            <div class="specs-item-label"><?= __('Розміри', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $wxl['size']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Розміри Фальц</div>
-                            <div class="specs-item-value">10–15 см</div>
+                            <div class="specs-item-label"><?= __('Розміри Фальц', 'mlr');?></div>
+                            <div class="specs-item-value"><?= $wxl['sizef']?></div>
                         </div>
                         <div class="specs-item-row">
-                            <div class="specs-item-label">Технічний документ</div>
-                            <div class="specs-item-value"><a href="#">деталі</a></div>
+                            <div class="specs-item-label"><?= __('Технічний документ', 'mlr');?></div>
+                            <div class="specs-item-value">
+                                <?php if ($wxl['td']): ?>
+                                    <a href="<?= $wxl['td']['url'] ?>" target="<?= $wxl['td']['target'] ?>"><?=
+                                        $wxl['td']['title'] ?></a>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                 </div>

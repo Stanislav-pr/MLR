@@ -3170,6 +3170,24 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     color: #434341;
   }
+  .products-section .products-wrap .product-table .product-specs-mobile .specs-item .specs-item-row .specs-item-value a {
+    color: #0C5498;
+    text-decoration: none;
+    position: relative;
+  }
+  .products-section .products-wrap .product-table .product-specs-mobile .specs-item .specs-item-row .specs-item-value a:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background-color: #0C5498;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+  }
+  .products-section .products-wrap .product-table .product-specs-mobile .specs-item .specs-item-row .specs-item-value a:hover:after {
+    display: none;
+  }
 }
 @media (max-width: 475px) {
   .hero .mob-banner {
