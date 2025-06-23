@@ -5,10 +5,10 @@ $intro_text = get_sub_field('intro_text');
 
 ?>
 
-<section class="algorithm-section">
+<section class="algorithm-section<?= is_front_page() ? '' : ' algorithm-page';?>">
     <div class="container">
         <?php if ($title) : ?>
-            <h2 class="title-section">
+            <h2 class="title-section<?= is_front_page() ? '' : ' title-two-row';?>">
                 <span class="line line-1"></span>
                 <span class="line-text"><?= $title; ?></span>
                 <span class="line line-2"></span>

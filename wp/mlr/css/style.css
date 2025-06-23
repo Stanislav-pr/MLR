@@ -230,6 +230,7 @@ h1, h2, h3, h4, h5, h6 {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
+  display: block;
 }
 .title-two-row .line.line-1 {
   top: 25%;

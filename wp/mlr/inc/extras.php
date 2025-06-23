@@ -28,3 +28,16 @@ function my_acf_google_map_api_key() {
     acf_update_setting( 'google_api_key', $key_map );
 }
 add_action( 'acf/init', 'my_acf_google_map_api_key' );
+
+
+// body class
+
+add_filter('body_class', 'my_custom_body_class');
+function my_custom_body_class($classes) {
+
+    if (is_page(350)) {
+        $classes[] = 'moved';
+    }
+
+    return $classes;
+}

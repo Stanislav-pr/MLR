@@ -25,7 +25,7 @@ $title = get_sub_field('title')
                             <div class="card-choice-title"><?php echo esc_html($card_title); ?></div>
                         <?php endif; ?>
                         <?php if ($card_text = get_sub_field('card_text')) : ?>
-                            <p><?php echo esc_html($card_text); ?></p>
+                            <?= $card_text; ?>
                         <?php endif; ?>
                     </div>
                 <?php endwhile; ?>
