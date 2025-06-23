@@ -1837,6 +1837,7 @@ h1, h2, h3, h4, h5, h6{
         }
         img{
           border-radius: 10px;
+          max-height: 200px;
         }
         &.swiper-slide-active{
           .urn-product{

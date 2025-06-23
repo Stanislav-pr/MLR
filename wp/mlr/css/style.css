@@ -47,6 +47,7 @@ b {
 * {
   margin: 0;
   padding: 0;
+  outline: none !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #434341;
@@ -2130,6 +2131,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .urn-slider.urn-products .swiper-product .swiper-slide img {
   border-radius: 10px;
+  max-height: 200px;
 }
 .urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-active .urn-product {
   -webkit-box-pack: start;
