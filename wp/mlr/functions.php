@@ -1,9 +1,9 @@
 <?php
 
-include 'inc/enqueue.php';     // add styles and scripts
-include 'inc/acf.php';         // custom acf functions
-include 'inc/extras.php';      // custom functions
-
+include 'inc/enqueue.php';         // add styles and scripts
+include 'inc/acf.php';             // custom acf functions
+include 'inc/extras.php';          // custom functions
+include 'inc/classes/walker.php';  // custom functions
 
 add_action('after_setup_theme', 'theme_register_nav_menu');
 

@@ -406,7 +406,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
   transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1), -webkit-transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
 }
-.header .header-wrapper .nav li.current-menu-item a {
+.header .header-wrapper .nav li.current-menu-item>a {
   font-weight: 700;
 }
 .header .header-wrapper .nav li.current-menu-item a:before {
@@ -419,7 +419,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   bottom: 0;
 }
-.header .header-wrapper .nav li.current-menu-item a:after {
+.header .header-wrapper .nav li.current-menu-item>a:after {
   content: "";
   display: block;
   width: 100%;
@@ -484,6 +484,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header .header-wrapper .nav li.menu-item-has-children .sub-menu li {
   margin: 0;
+  min-width: 160px;
 }
 .header .header-wrapper .nav li.menu-item-has-children .sub-menu li a {
   display: -webkit-box;
@@ -498,11 +499,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
   font-weight: 300;
   position: relative;
-  padding: 10px 38px 10px 16px;
+  padding: 10px 16px;
   border: 0.5px solid rgba(67, 67, 65, 0.5);
   border-radius: 30px;
-  -webkit-transition: text-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
-  transition: text-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  /*-webkit-transition: text-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;*/
+  /*transition: text-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;*/
   transition: box-shadow 0.3s ease, text-shadow 0.3s ease;
   transition: box-shadow 0.3s ease, text-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
@@ -516,9 +517,10 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 .header .header-wrapper .nav li.menu-item-has-children .sub-menu li a:hover {
+  font-weight: 700;
   -webkit-box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
           box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
-  text-shadow: 0.4px 0 #434341, -0.4px 0 #434341, 0 0.4px #434341, 0 -0.4px #434341, 0.3px 0.3px #434341, -0.3px 0.3px #434341, 0.3px -0.3px #434341, -0.3px -0.3px #434341;
+  /*text-shadow: 0.4px 0 #434341, -0.4px 0 #434341, 0 0.4px #434341, 0 -0.4px #434341, 0.3px 0.3px #434341, -0.3px 0.3px #434341, 0.3px -0.3px #434341, -0.3px -0.3px #434341;*/
 }
 .header .header-wrapper .nav li.menu-item-has-children .sub-menu:before {
   content: "";

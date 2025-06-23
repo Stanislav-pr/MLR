@@ -349,7 +349,7 @@ h1, h2, h3, h4, h5, h6{
           }
         }
         &.current-menu-item{
-          a{
+          >a{
             font-weight: 700;
             &:before{
               content: "";
@@ -405,6 +405,7 @@ h1, h2, h3, h4, h5, h6{
             z-index: 100;
             li{
               margin: 0;
+              min-width: 160px;
               a{
                 display: flex;
                 align-items: center;
@@ -417,7 +418,7 @@ h1, h2, h3, h4, h5, h6{
                 padding: 10px 38px 10px 16px;
                 border: $border;
                 border-radius: 30px;
-                transition: box-shadow 0.3s ease, text-shadow 0.3s ease;
+                transition: box-shadow 0.3s ease;
                 img{
                   width: 27px;
                   height: 27px;
@@ -428,16 +429,8 @@ h1, h2, h3, h4, h5, h6{
                   display: none;
                 }
                 &:hover{
+                  font-weight: 700;
                   box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
-                  text-shadow:
-                          0.4px 0 $primary-color,
-                          -0.4px 0 $primary-color,
-                          0 0.4px $primary-color,
-                          0 -0.4px $primary-color,
-                          0.3px 0.3px $primary-color,
-                          -0.3px 0.3px $primary-color,
-                          0.3px -0.3px $primary-color,
-                          -0.3px -0.3px $primary-color;
                 }
               }
             }

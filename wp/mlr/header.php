@@ -63,6 +63,7 @@ $main_social = get_field('main_social', 'option');
                         'theme_location' => 'main-menu',
                         'container' => false,
                         'menu_class' => 'nav',
+                        'walker' => new Nav_Menu(),
                     ]);?>
                 </div>
                 <div class="nav-mob">
