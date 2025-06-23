@@ -74,30 +74,29 @@ $text_farewell = get_field('text_farewell', 'options');
                     <?= $text_urn;?>
                 </div>
             <?php endif; ?>
-            <?php if($gallery_urn): ?>
-                <div class="urn-slider urn-products">
-                    <div class="swiper-button-prev" data-slider-button="prev-2"></div>
-                    <div class="container">
-                        <div class="swiper swiper-product" data-slider="2">
-                            <div class="swiper-wrapper">
-                                <?php foreach( $gallery_urn as $im ):?>
-                                    <div class="swiper-slide">
-                                        <div class="urn-product">
-                                            <a href="<?= $im['url'];?>" data-fancybox="gallery"
-                                               class="fancybox">
-                                                <img src="<?= $im['sizes']['medium'];?>" alt="<?= $im['alt'];?>">
-                                            </a>
-                                        </div>
-                                    </div>
-                                <?php endforeach;?>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-next" data-slider-button="next-2"></div>
-                </div>
-            <?php endif; ?>
         </div>
+        <?php if($gallery_urn): ?>
+            <div class="urn-slider urn-products">
+                <div class="swiper-button-prev" data-slider-button="prev-2"></div>
+                <div class="container">
+                    <div class="swiper swiper-product" data-slider="2">
+                        <div class="swiper-wrapper">
+                            <?php foreach( $gallery_urn as $im ):?>
+                                <div class="swiper-slide">
+                                    <div class="urn-product">
+                                        <a href="<?= $im['url'];?>" data-fancybox="gallery" class="fancybox">
+                                            <img src="<?= $im['sizes']['medium'];?>" alt="<?= $im['alt'];?>">
+                                        </a>
+                                    </div>
+                                </div>
+                            <?php endforeach;?>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="swiper-button-next" data-slider-button="next-2"></div>
+            </div>
+        <?php endif; ?>
     </section>
     <section class="farewell-section">
         <div class="container">
