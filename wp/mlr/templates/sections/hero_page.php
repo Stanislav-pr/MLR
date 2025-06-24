@@ -5,6 +5,7 @@ $title_text = get_sub_field('title_text');
 $button = get_sub_field('button');
 $text = get_sub_field('text');
 $image = get_sub_field('image');
+$top = get_sub_field('top_position_image');
 
 ?>
 
@@ -15,7 +16,7 @@ $image = get_sub_field('image');
         <?php endif; ?>
         <div class="cremation-hero-content">
             <?php if ($image): ?>
-                <div class="cremation-hero-img">
+                <div class="cremation-hero-img<?= $top?' top-img':''; ?>">
                     <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>">
                 </div>
             <?php endif; ?>
