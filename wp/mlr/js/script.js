@@ -152,14 +152,43 @@ jQuery(document).ready(function ($) {
         $(this).closest('.nav-mob').toggleClass('open');
     });
 
-    const lenis = new Lenis();
+    // const lenis = new Lenis();
+    //
+    // function raf(time) {
+    //     lenis.raf(time);
+    //     requestAnimationFrame(raf);
+    // }
+    //
+    // requestAnimationFrame(raf);
+
+    gsap.registerPlugin(ScrollTrigger)
+
+    const lenis = new Lenis({
+        smooth: true,
+        lerp: 0.08,
+    })
 
     function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
+        lenis.raf(time)
+        ScrollTrigger.update()
+        requestAnimationFrame(raf)
     }
+    requestAnimationFrame(raf)
 
-    requestAnimationFrame(raf);
+    gsap.utils.toArray('.title-section').forEach(title => {
+        gsap.from(title, {
+            scrollTrigger: {
+                trigger: title,
+                start: 'top 80%',
+                toggleActions: 'play none none none',
+            },
+            opacity: 0,
+            y: 20,
+            duration: 1,
+            ease: 'power1.out',
+        })
+    })
+
 });
 
 function initMap() {

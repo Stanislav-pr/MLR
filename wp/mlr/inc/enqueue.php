@@ -18,8 +18,12 @@ function add_scripts() {
     wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array('jquery'), false, true);
 
     wp_enqueue_script( 'lenis-js', 'https://unpkg.com/lenis@1.3.4/dist/lenis.min.js', array(), false, true);
+    wp_enqueue_script( 'gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', array(), null, true );
+    wp_enqueue_script( 'scrolltrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js', array('gsap'), null, true );
+
 
     wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.js', array('jquery'), false, true);
+
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery'), false, true);
 
     if($key_map){
