@@ -41,7 +41,7 @@ jQuery(document).ready(function ($) {
             breakpoints: {
                 0: {
                     slidesPerView: 1.5,
-                    spaceBetween: 20,
+                    spaceBetween: 16,
                     pagination: {
                         el: pagination,
                         clickable: true,
@@ -49,7 +49,7 @@ jQuery(document).ready(function ($) {
                 },
                 475: {
                     slidesPerView: 2,
-                    spaceBetween: 20,
+                    spaceBetween: 16,
                     pagination: {
                         el: pagination,
                         clickable: true,
@@ -57,7 +57,7 @@ jQuery(document).ready(function ($) {
                 },
                 568: {
                     slidesPerView: 2.5,
-                    spaceBetween: 0,
+                    spaceBetween: 16,
                     pagination: {
                         el: pagination,
                         clickable: true,
@@ -65,7 +65,7 @@ jQuery(document).ready(function ($) {
                 },
                 768: {
                     slidesPerView: 3,
-                    spaceBetween: 0,
+                    spaceBetween: 16,
                     pagination: {
                         el: pagination,
                         clickable: true,

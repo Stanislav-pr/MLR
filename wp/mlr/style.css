@@ -119,6 +119,7 @@ textarea:focus {
 @media (max-width: 580px) {
     .form-wrap form {
         width: 100%;
+        max-width: unset;
     }
     .form-wrap input {
         text-align: left;
