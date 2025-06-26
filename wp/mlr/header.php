@@ -55,9 +55,34 @@ $main_social = get_field('main_social', 'option');
                             ?>
                             <a class="cta-button" href="<?= esc_url($button_url); ?>" target="<?= esc_attr($button_target); ?>"><?= esc_html($button_title); ?></a>
                         <?php endif; ?>
-                        <div class="languages">
-                            <a href="#">UA</a>
-                        </div>
+
+                        <?php $languages = apply_filters( 'wpml_active_languages', NULL, array(
+                            'skip_missing' => 0,
+                            'orderby' => 'code',
+                        ) );
+
+
+
+                        if ( !empty( $languages ) ):?>
+                            <div class="languages">
+                                <?php foreach( $languages as $lang):
+                                    if( $lang['active'] ):?>
+                                        <a href="<?= esc_url($lang['url']); ?>" class="lang-item
+                                        lang-item-active"><?= esc_html($lang['tag']);
+                                        ?></a>
+                                    <?php endif;?>
+                                <?php endforeach;?>
+                                <div class="lang-dropdown" style="display: none;">
+                                    <?php foreach( $languages as $lang):
+                                        if( !$lang['active'] ):?>
+                                            <a href="<?= esc_url($lang['url']);?>" class="lang-item"><?= esc_html($lang['tag']); ?></a>
+                                        <?php endif;
+                                    endforeach; ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
+
                     </div>
                     <?php wp_nav_menu([
                         'theme_location' => 'main-menu',

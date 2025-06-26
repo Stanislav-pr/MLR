@@ -1,5 +1,14 @@
 jQuery(document).ready(function ($) {
 
+    // lang
+
+    $(document).on('click', '.lang-item-active', function (e) {
+        e.preventDefault();
+        console.log('hover');
+        $('.lang-dropdown').show();
+        $(this).addClass('lactive');
+    });
+
     // accordeon faq
 
     $(document).on('click', '.faqs-item-title', function () {

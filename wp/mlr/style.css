@@ -117,6 +117,9 @@ textarea:focus {
     padding-bottom: 80px;
 }
 @media (max-width: 580px) {
+    .form-section{
+        padding-bottom: 40px;
+    }
     .form-wrap form {
         width: 100%;
         max-width: unset;
@@ -125,6 +128,10 @@ textarea:focus {
         text-align: left;
         padding: 17px 32px;
     }
+    .form-wrap input[type="submit"] {
+        text-align: center;
+        margin-bottom: 0;
+    }
     .form-wrap textarea {
         padding: 17px 32px;
     }
@@ -132,3 +139,14 @@ textarea:focus {
         text-align: left;
     }
 ]}
+.languages{
+    position: relative;
+}
+.lang-dropdown{
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+}
+.lang-item-active:hover + .lang-dropdown{
+    display: block;
+}

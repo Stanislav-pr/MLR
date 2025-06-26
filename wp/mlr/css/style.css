@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   position: relative;
 }
-.languages a::after {
+.languages a.lang-item-active::after {
   content: "";
   display: block;
   position: absolute;
