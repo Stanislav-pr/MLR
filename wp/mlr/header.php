@@ -61,18 +61,14 @@ $main_social = get_field('main_social', 'option');
                             'orderby' => 'code',
                         ) );
 
-
-
                         if ( !empty( $languages ) ):?>
                             <div class="languages">
                                 <?php foreach( $languages as $lang):
                                     if( $lang['active'] ):?>
-                                        <a href="<?= esc_url($lang['url']); ?>" class="lang-item
-                                        lang-item-active"><?= esc_html($lang['tag']);
-                                        ?></a>
+                                        <a href="<?= esc_url($lang['url']); ?>" class="lang-item lang-item-active"><?= esc_html($lang['tag']);?></a>
                                     <?php endif;?>
                                 <?php endforeach;?>
-                                <div class="lang-dropdown" style="display: none;">
+                                <div class="lang-dropdown">
                                     <?php foreach( $languages as $lang):
                                         if( !$lang['active'] ):?>
                                             <a href="<?= esc_url($lang['url']);?>" class="lang-item"><?= esc_html($lang['tag']); ?></a>
@@ -92,9 +88,27 @@ $main_social = get_field('main_social', 'option');
                     ]);?>
                 </div>
                 <div class="nav-mob">
-                    <div class="languages">
-                        <a href="#">ua</a>
-                    </div>
+                    <?php $languages = apply_filters( 'wpml_active_languages', NULL, array(
+                        'skip_missing' => 0,
+                        'orderby' => 'code',
+                    ) );
+
+                    if ( !empty( $languages ) ):?>
+                        <div class="languages">
+                            <?php foreach( $languages as $lang):
+                                if( $lang['active'] ):?>
+                                    <a href="<?= esc_url($lang['url']); ?>" class="lang-item lang-item-active"><?= esc_html($lang['tag']);?></a>
+                                <?php endif;?>
+                            <?php endforeach;?>
+                            <div class="lang-dropdown">
+                                <?php foreach( $languages as $lang):
+                                    if( !$lang['active'] ):?>
+                                        <a href="<?= esc_url($lang['url']);?>" class="lang-item"><?= esc_html($lang['tag']); ?></a>
+                                    <?php endif;
+                                endforeach; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                     <div class="burger">
                         <span class="line-1"></span>
                         <span class="line-2"></span>
