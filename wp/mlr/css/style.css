@@ -2199,6 +2199,13 @@ h1, h2, h3, h4, h5, h6 {
   right: calc(((100% - 1170px) / 2) - 90px);
 }
 
+/* REVIEWS */
+
+
+
+
+
+
 @media (max-width: 1380px) {
   .swiper-button-prev {
     left: 10px;
