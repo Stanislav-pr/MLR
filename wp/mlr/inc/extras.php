@@ -41,3 +41,30 @@ function my_custom_body_class($classes) {
 
     return $classes;
 }
+
+
+// Stars
+
+
+function render_stars($rating){
+    $output = '';
+    $fullStars = floor($rating);
+    $halfStar = ($rating - $fullStars) >= 0.5 ? 1 : 0;
+    $emptyStars = 5 - $fullStars - $halfStar;
+
+    $template_dir = get_template_directory_uri();
+
+    for ($i = 0; $i < $fullStars; $i++) {
+        $output .= '<img src="' . $template_dir . '/img/star.svg" alt="star">';
+    }
+
+    if ($halfStar) {
+        $output .= '<img src="' . $template_dir . '/img/star-half.svg" alt="star-half">';
+    }
+
+    for ($i = 0; $i < $emptyStars; $i++) {
+        $output .= '<img src="' . $template_dir . '/img/star-empty.svg" alt="star-empty">';
+    }
+
+    return $output;
+}

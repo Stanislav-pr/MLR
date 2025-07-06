@@ -19,6 +19,91 @@ jQuery(document).ready(function ($) {
 
     //slider
 
+    const reviewsSection = document.querySelector('.reviews');
+
+    if (reviewsSection) {
+        const slider = reviewsSection.querySelector('.swiper-reviews');
+        const pagination = reviewsSection.querySelector('.swiper-pagination');
+        const nextBtnrev = reviewsSection.querySelector('.review-button-next');
+        const prevBtnrev = reviewsSection.querySelector('.review-button-prev');
+
+        // Проверяем, что все элементы найдены
+        if (!slider || !nextBtnrev || !prevBtnrev) {
+            console.error('Не найдены необходимые элементы для Swiper');
+            return;
+        }
+
+        const swiper = new Swiper(slider, {
+            slidesPerView: 4,
+            spaceBetween: 0,
+            loop: true,
+            allowTouchMove: true,
+            navigation: {
+                nextEl: nextBtnrev,
+                prevEl: prevBtnrev,
+            },
+            pagination: {
+                el: pagination,
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 16,
+                },
+                475: {
+                    slidesPerView: 2,
+                    spaceBetween: 16,
+                },
+                568: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                },
+                992: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                },
+                993: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                }
+            },
+            on: {
+                init: function() {
+                    // Скрываем пагинацию на больших экранах
+                    if (window.innerWidth > 992 && pagination) {
+                        pagination.style.display = 'none';
+                    }
+                },
+                resize: function() {
+                    // Управляем видимостью пагинации при изменении размера экрана
+                    if (window.innerWidth > 992 && pagination) {
+                        pagination.style.display = 'none';
+                    } else if (pagination) {
+                        pagination.style.display = 'block';
+                    }
+                }
+            }
+        });
+
+        // Добавляем обработчики событий для кнопок навигации
+        if (nextBtnrev) {
+            nextBtnrev.addEventListener('click', () => {
+                swiper.slideNext();
+            });
+        }
+
+        if (prevBtnrev) {
+            prevBtnrev.addEventListener('click', () => {
+                swiper.slidePrev();
+            });
+        }
+    }
+
     document.querySelectorAll('.swiper-product').forEach((slider, index) => {
         const id = slider.dataset.slider;
         const wrapper = slider.closest('.slider-wrapper');
