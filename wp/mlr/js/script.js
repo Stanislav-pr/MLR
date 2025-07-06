@@ -27,9 +27,7 @@ jQuery(document).ready(function ($) {
         const nextBtnrev = reviewsSection.querySelector('.review-button-next');
         const prevBtnrev = reviewsSection.querySelector('.review-button-prev');
 
-        // Проверяем, что все элементы найдены
         if (!slider || !nextBtnrev || !prevBtnrev) {
-            console.error('Не найдены необходимые элементы для Swiper');
             return;
         }
 
@@ -48,39 +46,31 @@ jQuery(document).ready(function ($) {
             },
             breakpoints: {
                 0: {
-                    slidesPerView: 1.5,
-                    spaceBetween: 16,
+                    slidesPerView: 1.25,
                 },
                 475: {
-                    slidesPerView: 2,
-                    spaceBetween: 16,
+                    slidesPerView: 1.5,
                 },
                 568: {
-                    slidesPerView: 2.5,
-                    spaceBetween: 16,
+                    slidesPerView: 2,
                 },
                 768: {
                     slidesPerView: 3,
-                    spaceBetween: 16,
                 },
                 992: {
                     slidesPerView: 4,
-                    spaceBetween: 0,
                 },
                 993: {
                     slidesPerView: 4,
-                    spaceBetween: 0,
                 }
             },
             on: {
                 init: function() {
-                    // Скрываем пагинацию на больших экранах
                     if (window.innerWidth > 992 && pagination) {
                         pagination.style.display = 'none';
                     }
                 },
                 resize: function() {
-                    // Управляем видимостью пагинации при изменении размера экрана
                     if (window.innerWidth > 992 && pagination) {
                         pagination.style.display = 'none';
                     } else if (pagination) {
@@ -90,7 +80,6 @@ jQuery(document).ready(function ($) {
             }
         });
 
-        // Добавляем обработчики событий для кнопок навигации
         if (nextBtnrev) {
             nextBtnrev.addEventListener('click', () => {
                 swiper.slideNext();

@@ -2215,9 +2215,9 @@ h1, h2, h3, h4, h5, h6 {
 .reviews{
   position: relative;
   margin-top: 38px;
+  overflow: hidden;
 }
 .review-item{
-  min-width: 282px;
   padding: 18px 16px;
 }
 .review-item .review-header{
@@ -2247,6 +2247,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
 }
 .review-item{
+  height: auto;
+  min-height: 308px;
   border-left: 0.5px solid rgba(67, 67, 65, 1);
 }
 .review-item.swiper-slide-active{
@@ -2446,6 +2448,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   .swiper-pagination {
     bottom: -15px !important;
+  }
+  .swiper-reviews{
+    padding-bottom: 30px;
+  }
+  .review-section {
+    padding: 50px 0 20px;
   }
 }
 @media (max-width: 768px) {
@@ -2771,8 +2779,23 @@ h1, h2, h3, h4, h5, h6 {
   .swiper-pagination {
     bottom: 10px !important;
   }
+  .reviews .swiper-pagination {
+    bottom: -12px !important;
+  }
 }
 @media (max-width: 568px) {
+  .reviews .container {
+    padding: 0;
+  }
+  .review-item.swiper-slide-next {
+    opacity: 0.3;
+  }
+  .review-item{
+    border-left: none;
+  }
+  .review-item.swiper-slide-active{
+    border-right: 0.5px solid rgba(67, 67, 65, 1);
+  }
   .title-section {
     text-align: left;
   }
@@ -3289,6 +3312,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 475px) {
+  .review-item.swiper-slide-active {
+    padding: 0 32px 0 15px;
+  }
+  .review-item.swiper-slide-next {
+    padding: 0 0 0 32px;
+  }
+  .review-item{
+    height: 100%;
+    min-height: unset;
+  }
   .hero .mob-banner {
     background-position: right;
   }

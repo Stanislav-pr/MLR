@@ -14,7 +14,7 @@ $reviews = get_sub_field('reviews');
                 <span class="line line-2"></span>
             </h2>
         <?php endif; ?>
-
+    </div>
         <?php if( $reviews ): ?>
 
             <div class="reviews">
@@ -70,5 +70,4 @@ $reviews = get_sub_field('reviews');
             <?php wp_reset_postdata(); ?>
         <?php endif; ?>
 
-    </div>
 </section>
