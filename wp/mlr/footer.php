@@ -98,7 +98,26 @@ $title_menu = get_field('title_menu', 'option');
         </div>
     </div>
 </footer>
+<!-- PhotoSwipe UI -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"></div>
+
+<script type="module">
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+    import PhotoSwipe from 'https://unpkg.com/photoswipe@5/dist/photoswipe.esm.min.js';
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '.swiper-wrapper',
+        children: 'a.pswp-item',
+        pswpModule: () => PhotoSwipe,
+        initialZoomLevel: 'fill',
+        secondaryZoomLevel: 'fill',
+        maxZoomLevel: 3,
+    });
+
+    lightbox.init();
+</script>
 
   <?php wp_footer(); ?>
+
 	</body>
 </html>

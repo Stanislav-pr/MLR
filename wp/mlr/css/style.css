@@ -246,6 +246,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   position: relative;
 }
+.languages a.lang-item-active{
+  padding-right: 12px;
+}
 .languages a.lang-item-active::after {
   content: "";
   display: block;
@@ -255,8 +258,8 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("../img/chevron-small.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  top: 8px;
-  right: -11px;
+  top: 10px;
+  right: 2px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -323,7 +326,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   color: #434341;
   font-weight: 300;
-  padding-right: 13px;
 }
 .header .header-wrapper .header-navigation .header-info a {
   margin-left: 20px;
@@ -358,11 +360,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-right: 20px;
 }
 .header .header-wrapper .nav li {
-  margin-right: 43px;
+  margin-right: 22px;
   position: relative;
+  padding-right: 20px;
+  cursor: pointer;
 }
 .header .header-wrapper .nav li:last-child {
   margin-right: 0;
@@ -444,7 +447,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   background-repeat: no-repeat;
   top: 50%;
-  right: -18px;
+  right: 2px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -519,9 +522,9 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 .header .header-wrapper .nav li.menu-item-has-children .sub-menu li a:hover {
-  font-weight: 700;
-  -webkit-box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
-          box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
+  -webkit-box-shadow: 0 0 7px 0 rgba(67, 67, 65, 0.25);
+          box-shadow: 0 0 7px 0 rgba(67, 67, 65, 0.25);
+
 }
 .header .header-wrapper .nav li.menu-item-has-children .sub-menu:before {
   content: "";
@@ -536,9 +539,8 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 .header .header-wrapper .nav li.menu-item-has-children .sub-menu li.current-menu-item a {
-  font-weight: 700;
-  -webkit-box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
-  box-shadow: 0 0 0 0.8px rgba(67, 67, 65, 0.8);
+  -webkit-box-shadow: 0 0 7px 0 rgba(67, 67, 65, 0.25);
+  box-shadow: 0 0 7px 0 rgba(67, 67, 65, 0.25);
 }
 .header .header-wrapper .nav li.menu-item-has-children.non-flag .sub-menu {
   display: -ms-grid;
@@ -623,7 +625,7 @@ h1, h2, h3, h4, h5, h6 {
 .info-section {
   /*padding: 48px 0 32px;*/
   padding: 0 0 32px;
-  margin-top: -135px;
+  margin-top: -85px;
   position: relative;
   z-index: 3;
   background-color: #E9DACE;
@@ -1395,6 +1397,10 @@ h1, h2, h3, h4, h5, h6 {
   content: url("../img/arrow-right.svg");
 }
 
+.cremation-hero {
+  padding-top: 24px;
+}
+
 .page-hero {
   padding: 24px 0 40px;
 }
@@ -1474,10 +1480,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 15px;
 }
 .happened-section .happened-list li a:hover {
-  font-weight: 700;
-  border: 1px solid rgb(67, 67, 65);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-box-shadow: 0 0 7px 0 rgba(67, 67, 65, 0.25);
+  box-shadow: 0 0 7px 0 rgba(67, 67, 65, 0.25);
 }
 
 .urn-section {

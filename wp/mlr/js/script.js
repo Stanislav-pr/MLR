@@ -17,14 +17,6 @@ jQuery(document).ready(function ($) {
     });
 
 
-    // modals
-
-    $(".fancybox").fancybox({
-        touch: false,
-        autoFocus: false,
-    });
-
-
     //slider
 
     document.querySelectorAll('.swiper-product').forEach((slider, index) => {
@@ -37,6 +29,7 @@ jQuery(document).ready(function ($) {
         new Swiper(slider, {
             slidesPerView: 4,
             spaceBetween: 0,
+            simulateTouch: false,
             loop: true,
             on: {
                 slideChange: updateFourthVisibleSlidePadding,
@@ -123,6 +116,7 @@ jQuery(document).ready(function ($) {
     }
 
 
+
     // title line
 
     $('.title-section.one-line').each(function () {
@@ -161,14 +155,7 @@ jQuery(document).ready(function ($) {
         $(this).closest('.nav-mob').toggleClass('open');
     });
 
-    // const lenis = new Lenis();
-    //
-    // function raf(time) {
-    //     lenis.raf(time);
-    //     requestAnimationFrame(raf);
-    // }
-    //
-    // requestAnimationFrame(raf);
+    // Animation
 
     gsap.registerPlugin(ScrollTrigger)
 
@@ -184,7 +171,7 @@ jQuery(document).ready(function ($) {
     }
     requestAnimationFrame(raf)
 
-    gsap.utils.toArray('.title-section').forEach(title => {
+    gsap.utils.toArray('section').forEach(title => {
         gsap.from(title, {
             scrollTrigger: {
                 trigger: title,

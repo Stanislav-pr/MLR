@@ -47,6 +47,7 @@ textarea::-webkit-input-placeholder {
     font-weight: 300;
     font-size: 18px;
     opacity: 0.5;
+    font-family: Montserrat, sans-serif;
 }
 input::-moz-placeholder,
 textarea::-moz-placeholder {
@@ -54,6 +55,7 @@ textarea::-moz-placeholder {
     font-weight: 300;
     font-size: 18px;
     opacity: 0.5;
+    font-family: Montserrat, sans-serif;
 }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
@@ -61,6 +63,7 @@ textarea:-ms-input-placeholder {
     font-weight: 300;
     font-size: 18px;
     opacity: 0.5;
+    font-family: Montserrat, sans-serif;
 }
 input::-ms-input-placeholder,
 textarea::-ms-input-placeholder {
@@ -68,6 +71,7 @@ textarea::-ms-input-placeholder {
     font-weight: 300;
     font-size: 18px;
     opacity: 0.5;
+    font-family: Montserrat, sans-serif;
 }
 input:focus,
 textarea:focus {
@@ -116,6 +120,9 @@ textarea:focus {
 .form-section{
     padding-bottom: 80px;
 }
+.facebook-contact{
+    width: fit-content;
+}
 @media (max-width: 580px) {
     .form-section{
         padding-bottom: 40px;
@@ -138,9 +145,11 @@ textarea:focus {
     ::placeholder {
         text-align: left;
     }
-]}
+}
+
 .languages{
     position: relative;
+    cursor: pointer;
 }
 .lang-dropdown{
     position: absolute;
@@ -195,4 +204,11 @@ textarea:focus {
         left: -5px;
         bottom: -30px;
     }
+}
+.otgs-development-site-front-end{
+    display: none !important;
+}
+.swiper-disabled {
+    pointer-events: none !important;
+    touch-action: none !important;
 }

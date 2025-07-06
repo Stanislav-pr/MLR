@@ -268,7 +268,8 @@ $wxl = $specifications['white_xl'];
                         <?php foreach( $products as $im ):?>
                             <div class="swiper-slide">
                                 <div class="urn-product">
-                                    <a href="<?= $im['url'];?>" data-fancybox="gallery" class="fancybox">
+                                    <a href="<?= $im['url'];?>" data-pswp-width="<?= esc_attr($im['width']); ?>"
+                                       data-pswp-height="<?= esc_attr($im['height']); ?>" class="pswp-item">
                                         <img src="<?= $im['sizes']['medium'];?>" alt="<?= $im['alt'];?>">
                                     </a>
                                 </div>
