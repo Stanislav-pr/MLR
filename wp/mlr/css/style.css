@@ -618,8 +618,8 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 0;
   z-index: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(233, 218, 206, 0)), color-stop(48%, rgba(233, 218, 206, 0.7)), to(rgb(233, 218, 206)));
-  background: linear-gradient(to bottom, rgba(233, 218, 206, 0) 0%, rgba(233, 218, 206, 0.7) 48%, rgb(233, 218, 206) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(233, 218, 206, 0)), color-stop(65%, rgba(233, 218, 206, 0.92)), to(rgb(233, 218, 206)));
+  background: linear-gradient(to bottom, rgba(233, 218, 206, 0) 0%, rgba(233, 218, 206, 0.92) 65%, rgb(233, 218, 206) 100%);
 }
 
 .info-section {
@@ -2281,6 +2281,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .info-section {
     padding: 40px 0 32px;
+    margin-top: 0;
   }
   .services-section .services-items {
     grid-column-gap: 20px;
