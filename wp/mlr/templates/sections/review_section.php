@@ -27,7 +27,7 @@ $reviews = get_sub_field('reviews');
 
                                 $rating = get_field('rating');
                                 $title = preg_replace('/\s/', '<br>', get_the_title(), 1);
-                                $url = get_field('link');
+                                $url = get_field('facebook_link');
 
                                 ?>
 
