@@ -413,6 +413,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .header .header-wrapper .nav li.current-menu-item>a {
   font-weight: 700;
+  padding: 0 2px;
 }
 .header .header-wrapper .nav li.current-menu-item a:before {
   content: "";
@@ -1426,6 +1427,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .page-hero .cremation-hero-content .cremation-hero-text .cremation-text p {
   margin-bottom: 10px;
+}
+.page-hero .cremation-hero-content .cremation-hero-text .btn-default{
+  position: relative;
+  z-index: 3;
 }
 .page-hero .cremation-hero-content .cremation-hero-img {
   max-width: 25%;
