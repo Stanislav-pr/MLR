@@ -103,7 +103,7 @@ jQuery(document).ready(function ($) {
         new Swiper(slider, {
             slidesPerView: 4,
             spaceBetween: 0,
-            simulateTouch: false,
+            simulateTouch: true,
             loop: true,
             on: {
                 slideChange: updateFourthVisibleSlidePadding,
