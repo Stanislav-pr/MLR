@@ -1502,8 +1502,18 @@ h1, h2, h3, h4, h5, h6 {
           align-items: stretch;
   margin-left: 1px;
 }
+.urn-products .swiper-product:after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  background-color: #E9DACE;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
 .urn-products .swiper-product .swiper-wrapper .swiper-slide {
-  border-right: 0.5px solid rgba(67, 67, 65, 0.5);
+  border-left: 0.5px solid rgba(67, 67, 65, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2157,9 +2167,9 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-prev {
-  border-right: none;
-}
+/*.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-active {*/
+/*  border-left: none;*/
+/*}*/
 /*.urn-slider.urn-products .swiper-product .swiper-slide:after {*/
 /*  display: block;*/
 /*  width: 0.5px;*/
@@ -2185,21 +2195,21 @@ h1, h2, h3, h4, h5, h6 {
 /*  content: "";*/
 /*  left: 14px;*/
 /*}*/
-.urn-slider.urn-products .swiper-product .swiper-slide.last-visible .urn-product {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-next {
-  padding-right: 15px;
-}
-.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-next:after {
-  content: "";
-  right: 1px;
-}
-.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-next + .swiper-slide {
-  padding-left: 15px;
-}
+/*.urn-slider.urn-products .swiper-product .swiper-slide.last-visible .urn-product {*/
+/*  -webkit-box-pack: end;*/
+/*      -ms-flex-pack: end;*/
+/*          justify-content: flex-end;*/
+/*}*/
+/*.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-next {*/
+/*  padding-right: 15px;*/
+/*}*/
+/*.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-next:after {*/
+/*  content: "";*/
+/*  right: 1px;*/
+/*}*/
+/*.urn-slider.urn-products .swiper-product .swiper-slide.swiper-slide-next + .swiper-slide {*/
+/*  padding-left: 15px;*/
+/*}*/
 .swiper-button-prev{
   left: calc(((100% - 1170px) / 2) - 90px);
 }
@@ -2758,6 +2768,9 @@ h1, h2, h3, h4, h5, h6 {
   }
   .urn-slider.urn-products .swiper-product .swiper-wrapper .swiper-slide {
     padding-top: 0;
+  }
+  .urn-products .swiper-product .swiper-wrapper .swiper-slide{
+    border: none;
   }
   .urn-slider.urn-products .container {
     padding: 0;
